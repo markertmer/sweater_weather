@@ -11,28 +11,70 @@ RSpec.describe ForecastObject, type: :poro do
 
   it 'has current weather data' do
     current = @forecast.current_data
+
     expect(current).to be_a Hash
 
-    expect(current[:date]).to eq
-    expect(current[:description]).to eq
-    expect(current[:feels_like_temp]).to eq
-    expect(current[:high_temp]).to eq
-    expect(current[:humidity]).to eq
-    expect(current[:icon_link]).to eq
-    expect(current[:low_temp]).to eq
-    expect(current[:sunrise]).to eq
-    expect(current[:sunset]).to eq
-    expect(current[:temperature]).to eq
-    expect(current[:time]).to eq
-    expect(current[:uv_index]).to eq
-    expect(current[:visibility]).to eq
+    expect(current[:date]).to eq "April 23"
+    expect(current[:description]).to eq "overcast clouds"
+    expect(current[:feels_like_temp]).to eq 44
+    expect(current[:high_temp]).to eq 54
+    expect(current[:humidity]).to eq 33
+    expect(current[:icon_url]).to eq "http://openweathermap.org/img/wn/04d@2x.png"
+    expect(current[:low_temp]).to eq 45
+    expect(current[:sunrise]).to eq "6:09 AM"
+    expect(current[:sunset]).to eq "7:47 PM"
+    expect(current[:temperature]).to eq 50
+    expect(current[:time]).to eq "7:38 PM"
+    expect(current[:uv_index]).to eq 0
+    expect(current[:uv_description]).to eq "low"
+    expect(current[:visibility]).to eq 6.2
   end
 
   it 'has hourly weather data' do
+    hourly = @forecast.hourly_data
 
+    expect(hourly).to be_an Array
+    expect(hourly.count).to eq 48
+
+    hourly each do |hour|
+      expect(hour).to be_instance_of HourObject
+      expect(hour.icon_url).to be_a String
+      expect(hour.temperature).to be_an Integer
+      expect(hour.time).to be_a String
+    end
+
+    first = hourly[0]
+
+    expect(first.icon_url).to eq "http://openweathermap.org/img/wn/04d@2x.png"
+    expect(first.temperature).to eq 50
+    expect(first.time).to eq "7:00 PM"
   end
 
   it 'has daily weather data' do
+    daily = @forecast.daily_data
 
+    expect(daily).to be_an Array
+    expect(daily.count).to eq 8
+
+    daily each do |day|
+      expect(day).to be_instance_of DayObject
+      expect(day.description).to be_a String
+      expect(day.high_temp).to be_an Integer
+      expect(day.icon_url).to be_a String
+      expect(day.low_temp).to be_an Integer
+      expect(day.name).to be_a String
+      expect(day.precip_amount).to be_an Float
+      expect(day.precip_chance).to be_an String
+    end
+
+    first = daily[0]
+
+    expect(first.description).to eq "light rain"
+    expect(first.high_temp).to eq 54
+    expect(first.icon_url).to eq "http://openweathermap.org/img/wn/10d@2x.png"
+    expect(first.low_temp).to eq 45
+    expect(first.name).to eq "Saturday"
+    expect(first.precip_amount).to eq 0.14
+    expect(first.precip_chance).to eq 39
   end
 end
