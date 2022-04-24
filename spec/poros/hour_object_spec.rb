@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe HourObject, type: :poro do
 
   before do
-    response_body = File.read("spec/fixtures/forecast/good_request_response.json")
+    response_body = File.read("spec/fixtures/forecasts/good_request_response.json")
     @body = JSON.parse(response_body, symbolize_names: true)
   end
 
