@@ -1,0 +1,55 @@
+{
+    "info": {
+        "statuscode": 0,
+        "copyright": {
+            "text": "© 2022 MapQuest, Inc.",
+            "imageUrl": "http://api.mqcdn.com/res/mqlogo.gif",
+            "imageAltText": "© 2022 MapQuest, Inc."
+        },
+        "messages": []
+    },
+    "options": {
+        "maxResults": -1,
+        "thumbMaps": true,
+        "ignoreLatLngInput": false
+    },
+    "results": [
+        {
+            "providedLocation": {
+                "location": "chicago, il"
+            },
+            "locations": [
+                {
+                    "street": "",
+                    "adminArea6": "",
+                    "adminArea6Type": "Neighborhood",
+                    "adminArea5": "Chicago",
+                    "adminArea5Type": "City",
+                    "adminArea4": "Cook County",
+                    "adminArea4Type": "County",
+                    "adminArea3": "IL",
+                    "adminArea3Type": "State",
+                    "adminArea1": "US",
+                    "adminArea1Type": "Country",
+                    "postalCode": "",
+                    "geocodeQualityCode": "A5XAX",
+                    "geocodeQuality": "CITY",
+                    "dragPoint": false,
+                    "sideOfStreet": "N",
+                    "linkId": "282039507",
+                    "unknownInput": "",
+                    "type": "s",
+                    "latLng": {
+                        "lat": 41.883229,
+                        "lng": -87.632398
+                    },
+                    "displayLatLng": {
+                        "lat": 41.883229,
+                        "lng": -87.632398
+                    },
+                    "mapUrl": "http://www.mapquestapi.com/staticmap/v5/map?key=Gy11Rv1tBb2NzwTSHSQIh2g8zGGZPmID&type=map&size=225,160&locations=41.883229,-87.632398|marker-sm-50318A-1&scalebar=true&zoom=12&rand=-1130914158"
+                }
+            ]
+        }
+    ]
+}
