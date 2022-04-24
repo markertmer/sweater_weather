@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe DayObject, type: :poro do
 
   before do
-    response_body = File.read("spec/fixtures/forecast/good_request_response.json")
+    response_body = File.read("spec/fixtures/forecasts/good_request_response.json")
     @body = JSON.parse(response_body, symbolize_names: true)
   end
 
@@ -15,7 +15,7 @@ RSpec.describe DayObject, type: :poro do
     expect(object).to be_instance_of DayObject
 
     expect(object.description).to eq "light rain"
-    expect(object.high_temp).to eq 54
+    expect(object.high_temp).to eq 55
     expect(object.icon_url).to eq "http://openweathermap.org/img/wn/10d@2x.png"
     expect(object.low_temp).to eq 45
     expect(object.name).to eq "Saturday"
