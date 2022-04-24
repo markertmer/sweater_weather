@@ -10,8 +10,6 @@ RSpec.describe ForecastObject, type: :poro do
   end
 
   it 'has current weather data' do
-    # current = @forecast.current_data
-
     expect(@forecast.date).to eq "April 23"
     expect(@forecast.description).to eq "overcast clouds"
     expect(@forecast.feels_like_temp).to eq 44
