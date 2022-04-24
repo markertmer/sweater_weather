@@ -35,15 +35,15 @@ RSpec.describe ForecastService, type: :service do
 
       current = response[:current]
       expect(current[:dt]).to eq 1650764315
-      expect(current[:temp]).to eq 49.69
+      expect(current[:weather][0][:description]).to eq "overcast clouds"
       expect(current[:feels_like]).to eq 44.49
       expect(current[:humidity]).to eq 33
-      expect(current[:uvi]).to eq 0
-      expect(current[:visibility]).to eq 10000
+      expect(current[:weather][0][:icon]).to eq "04d"
       expect(current[:sunrise]).to eq 1650715789
       expect(current[:sunset]).to eq 1650764847
-      expect(current[:weather][0][:description]).to eq "overcast clouds"
-      expect(current[:weather][0][:icon]).to eq "04d"
+      expect(current[:temp]).to eq 49.69
+      expect(current[:uvi]).to eq 0
+      expect(current[:visibility]).to eq 10000
 
       hours = response[:hourly]
       expect(hours.count).to eq 48
