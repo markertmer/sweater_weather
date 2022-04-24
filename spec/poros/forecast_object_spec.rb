@@ -3,40 +3,38 @@ require 'rails_helper'
 RSpec.describe ForecastObject, type: :poro do
 
   before do
-    response_body = File.read("spec/fixtures/forecast/good_request_response.json")
+    response_body = File.read("spec/fixtures/forecasts/good_request_response.json")
     body = JSON.parse(response_body, symbolize_names: true)
 
     @forecast = ForecastObject.new(body)
   end
 
   it 'has current weather data' do
-    current = @forecast.current_data
+    # current = @forecast.current_data
 
-    expect(current).to be_a Hash
-
-    expect(current[:date]).to eq "April 23"
-    expect(current[:description]).to eq "overcast clouds"
-    expect(current[:feels_like_temp]).to eq 44
-    expect(current[:high_temp]).to eq 54
-    expect(current[:humidity]).to eq 33
-    expect(current[:icon_url]).to eq "http://openweathermap.org/img/wn/04d@2x.png"
-    expect(current[:low_temp]).to eq 45
-    expect(current[:sunrise]).to eq "6:09 AM"
-    expect(current[:sunset]).to eq "7:47 PM"
-    expect(current[:temperature]).to eq 50
-    expect(current[:time]).to eq "7:38 PM"
-    expect(current[:uv_index]).to eq 0
-    expect(current[:uv_description]).to eq "low"
-    expect(current[:visibility]).to eq 6.2
+    expect(@forecast.date).to eq "April 23"
+    expect(@forecast.description).to eq "overcast clouds"
+    expect(@forecast.feels_like_temp).to eq 44
+    expect(@forecast.high_temp).to eq 55
+    expect(@forecast.humidity).to eq 33
+    expect(@forecast.icon_url).to eq "http://openweathermap.org/img/wn/04d@2x.png"
+    expect(@forecast.low_temp).to eq 45
+    expect(@forecast.sunrise).to eq "6:09 AM"
+    expect(@forecast.sunset).to eq "7:47 PM"
+    expect(@forecast.temperature).to eq 50
+    expect(@forecast.time).to eq "7:38 PM"
+    expect(@forecast.uv_index).to eq 0
+    expect(@forecast.uv_description).to eq "low"
+    expect(@forecast.visibility).to eq 6.2
   end
 
   it 'has hourly weather data' do
-    hourly = @forecast.hourly_data
+    hourly = @forecast.hours
 
     expect(hourly).to be_an Array
     expect(hourly.count).to eq 48
 
-    hourly each do |hour|
+    hourly.each do |hour|
       expect(hour).to be_instance_of HourObject
       expect(hour.icon_url).to be_a String
       expect(hour.temperature).to be_an Integer
@@ -51,12 +49,12 @@ RSpec.describe ForecastObject, type: :poro do
   end
 
   it 'has daily weather data' do
-    daily = @forecast.daily_data
+    daily = @forecast.days
 
     expect(daily).to be_an Array
     expect(daily.count).to eq 8
 
-    daily each do |day|
+    daily.each do |day|
       expect(day).to be_instance_of DayObject
       expect(day.description).to be_a String
       expect(day.high_temp).to be_an Integer
@@ -64,13 +62,13 @@ RSpec.describe ForecastObject, type: :poro do
       expect(day.low_temp).to be_an Integer
       expect(day.name).to be_a String
       expect(day.precip_amount).to be_an Float
-      expect(day.precip_chance).to be_an String
+      expect(day.precip_chance).to be_an Integer
     end
 
     first = daily[0]
 
     expect(first.description).to eq "light rain"
-    expect(first.high_temp).to eq 54
+    expect(first.high_temp).to eq 55
     expect(first.icon_url).to eq "http://openweathermap.org/img/wn/10d@2x.png"
     expect(first.low_temp).to eq 45
     expect(first.name).to eq "Saturday"
