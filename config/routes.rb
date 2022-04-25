@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   # end
 
   get 'api/v1/backgrounds', to: 'backgrounds#show'
+  get 'api/v1/forecast', to: 'forecast#show'
 end
