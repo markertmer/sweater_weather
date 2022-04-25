@@ -1,22 +1,23 @@
-class YelpService < ApplicationService
+class RestaurantService < ApplicationService
 
-  def self.get_data(location, query)
+  def self.get_restaurant(location, query)
     url = build_url(location, query)
-    get_yelp_data(url)
+    response = get_yelp_data(url)
+    json_parse(response)
   end
 
   def self.build_url(location, query)
     base = 'https://api.yelp.com/v3/businesses/search?'
     location = "location=#{location}&"
+    category = "category=restaurants"
     search = "term=#{query}"
 
     [base, location, search].join
   end
 
   def self.get_yelp_data(url)
-    response = Faraday.new(url) do |faraday|
+    Faraday.new(url) do |faraday|
       faraday.headers["Authorization"] = ["Bearer #{ENV['yelp_key']}"]
     end.get
-    json_parse(response)
   end
 end
