@@ -2,7 +2,7 @@ class BackgroundFacade
 
   def self.get_background(query)
     response = ImageService.get_image(query)
-    # results = response[:results]
+
     if response[:results] == []
       NoResultsSerializer.response
     else
