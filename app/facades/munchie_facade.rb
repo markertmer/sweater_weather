@@ -1,6 +1,7 @@
 class MunchieFacade
 
   def self.get_munchie(start, finish, food)
+
     data = DestinationService.get_destination(start, finish)
     destination = DestinationObject.new(data[:route])
 
