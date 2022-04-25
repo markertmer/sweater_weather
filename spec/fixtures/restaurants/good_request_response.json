@@ -1,0 +1,958 @@
+{
+    "businesses": [
+        {
+            "id": "mU3zS9v3EJTfFT0GhoP6Kg",
+            "alias": "big-als-burgers-and-dogs-fort-collins",
+            "name": "Big AL'S Burgers & Dogs",
+            "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/fmHJQVSy0UXh3X0beieYpQ/o.jpg",
+            "is_closed": false,
+            "url": "https://www.yelp.com/biz/big-als-burgers-and-dogs-fort-collins?adjust_creative=yI6u1BFJxzRJ6HbsnJRmFQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=yI6u1BFJxzRJ6HbsnJRmFQ",
+            "review_count": 222,
+            "categories": [
+                {
+                    "alias": "burgers",
+                    "title": "Burgers"
+                },
+                {
+                    "alias": "hotdog",
+                    "title": "Hot Dogs"
+                }
+            ],
+            "rating": 4.0,
+            "coordinates": {
+                "latitude": 40.5871616781322,
+                "longitude": -105.078046359122
+            },
+            "transactions": [
+                "pickup",
+                "delivery"
+            ],
+            "price": "$",
+            "location": {
+                "address1": "140 W Mountain Ave",
+                "address2": "",
+                "address3": "",
+                "city": "Fort Collins",
+                "zip_code": "80524",
+                "country": "US",
+                "state": "CO",
+                "display_address": [
+                    "140 W Mountain Ave",
+                    "Fort Collins, CO 80524"
+                ]
+            },
+            "phone": "+19702329815",
+            "display_phone": "(970) 232-9815",
+            "distance": 4110.722366056631
+        },
+        {
+            "id": "841Gjc9n26KHDuhnLFxcdA",
+            "alias": "bad-daddys-burger-bar-fort-collins-2",
+            "name": "Bad Daddy's Burger Bar",
+            "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/ZcqjVojZ7py4oDHDoruaEg/o.jpg",
+            "is_closed": false,
+            "url": "https://www.yelp.com/biz/bad-daddys-burger-bar-fort-collins-2?adjust_creative=yI6u1BFJxzRJ6HbsnJRmFQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=yI6u1BFJxzRJ6HbsnJRmFQ",
+            "review_count": 155,
+            "categories": [
+                {
+                    "alias": "burgers",
+                    "title": "Burgers"
+                },
+                {
+                    "alias": "bars",
+                    "title": "Bars"
+                },
+                {
+                    "alias": "newamerican",
+                    "title": "American (New)"
+                }
+            ],
+            "rating": 4.0,
+            "coordinates": {
+                "latitude": 40.54202,
+                "longitude": -105.073273
+            },
+            "transactions": [
+                "pickup",
+                "delivery"
+            ],
+            "price": "$$",
+            "location": {
+                "address1": "347 E Foothills Pkwy",
+                "address2": "Ste 110",
+                "address3": null,
+                "city": "Fort Collins",
+                "zip_code": "80525",
+                "country": "US",
+                "state": "CO",
+                "display_address": [
+                    "347 E Foothills Pkwy",
+                    "Ste 110",
+                    "Fort Collins, CO 80525"
+                ]
+            },
+            "phone": "+19702296060",
+            "display_phone": "(970) 229-6060",
+            "distance": 925.999113326282
+        },
+        {
+            "id": "amQvIeAXd154tb74aw95Fg",
+            "alias": "stuft-a-burger-bar-fort-collins",
+            "name": "Stuft A Burger Bar",
+            "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/TEQhP8q_XECgdiEIAWED5g/o.jpg",
+            "is_closed": false,
+            "url": "https://www.yelp.com/biz/stuft-a-burger-bar-fort-collins?adjust_creative=yI6u1BFJxzRJ6HbsnJRmFQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=yI6u1BFJxzRJ6HbsnJRmFQ",
+            "review_count": 374,
+            "categories": [
+                {
+                    "alias": "burgers",
+                    "title": "Burgers"
+                },
+                {
+                    "alias": "desserts",
+                    "title": "Desserts"
+                },
+                {
+                    "alias": "newamerican",
+                    "title": "American (New)"
+                }
+            ],
+            "rating": 4.0,
+            "coordinates": {
+                "latitude": 40.5850563049316,
+                "longitude": -105.076522827148
+            },
+            "transactions": [
+                "pickup",
+                "delivery"
+            ],
+            "price": "$$",
+            "location": {
+                "address1": "210 S College Ave",
+                "address2": "",
+                "address3": "",
+                "city": "Fort Collins",
+                "zip_code": "80524",
+                "country": "US",
+                "state": "CO",
+                "display_address": [
+                    "210 S College Ave",
+                    "Fort Collins, CO 80524"
+                ]
+            },
+            "phone": "+19704846377",
+            "display_phone": "(970) 484-6377",
+            "distance": 3869.9346322930087
+        },
+        {
+            "id": "AShTOxMgyzkVrA4Aode8HA",
+            "alias": "mrbeast-burger-fort-collins",
+            "name": "MrBeast Burger",
+            "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/qfV5vzPgJ4cdO9VwFDuW3Q/o.jpg",
+            "is_closed": false,
+            "url": "https://www.yelp.com/biz/mrbeast-burger-fort-collins?adjust_creative=yI6u1BFJxzRJ6HbsnJRmFQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=yI6u1BFJxzRJ6HbsnJRmFQ",
+            "review_count": 1,
+            "categories": [
+                {
+                    "alias": "burgers",
+                    "title": "Burgers"
+                },
+                {
+                    "alias": "fooddeliveryservices",
+                    "title": "Food Delivery Services"
+                }
+            ],
+            "rating": 5.0,
+            "coordinates": {
+                "latitude": 40.52294345744497,
+                "longitude": -105.0648287
+            },
+            "transactions": [
+                "delivery"
+            ],
+            "location": {
+                "address1": "701 E Harmony Rd",
+                "address2": "",
+                "address3": null,
+                "city": "Fort Collins",
+                "zip_code": "80525",
+                "country": "US",
+                "state": "CO",
+                "display_address": [
+                    "701 E Harmony Rd",
+                    "Fort Collins, CO 80525"
+                ]
+            },
+            "phone": "",
+            "display_phone": "",
+            "distance": 3150.7235780485457
+        },
+        {
+            "id": "CCjW5u1_pEZOk6cbBTABYA",
+            "alias": "the-colorado-room-fort-collins",
+            "name": "The Colorado Room",
+            "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/agTezoFHIYotodrMMx5zTw/o.jpg",
+            "is_closed": false,
+            "url": "https://www.yelp.com/biz/the-colorado-room-fort-collins?adjust_creative=yI6u1BFJxzRJ6HbsnJRmFQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=yI6u1BFJxzRJ6HbsnJRmFQ",
+            "review_count": 670,
+            "categories": [
+                {
+                    "alias": "musicvenues",
+                    "title": "Music Venues"
+                },
+                {
+                    "alias": "tradamerican",
+                    "title": "American (Traditional)"
+                },
+                {
+                    "alias": "sportsbars",
+                    "title": "Sports Bars"
+                }
+            ],
+            "rating": 4.5,
+            "coordinates": {
+                "latitude": 40.57855,
+                "longitude": -105.07657
+            },
+            "transactions": [
+                "pickup",
+                "delivery"
+            ],
+            "price": "$$",
+            "location": {
+                "address1": "642 S College Ave",
+                "address2": null,
+                "address3": "",
+                "city": "Fort Collins",
+                "zip_code": "80524",
+                "country": "US",
+                "state": "CO",
+                "display_address": [
+                    "642 S College Ave",
+                    "Fort Collins, CO 80524"
+                ]
+            },
+            "phone": "+19706821163",
+            "display_phone": "(970) 682-1163",
+            "distance": 3147.1918490157277
+        },
+        {
+            "id": "DGiUn2PvFnhj312qmRbwWg",
+            "alias": "the-regional-fort-collins-3",
+            "name": "The Regional",
+            "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/qexmqBosnM2mQzhQtWEVOg/o.jpg",
+            "is_closed": false,
+            "url": "https://www.yelp.com/biz/the-regional-fort-collins-3?adjust_creative=yI6u1BFJxzRJ6HbsnJRmFQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=yI6u1BFJxzRJ6HbsnJRmFQ",
+            "review_count": 118,
+            "categories": [
+                {
+                    "alias": "comfortfood",
+                    "title": "Comfort Food"
+                },
+                {
+                    "alias": "bakeries",
+                    "title": "Bakeries"
+                },
+                {
+                    "alias": "tradamerican",
+                    "title": "American (Traditional)"
+                }
+            ],
+            "rating": 4.5,
+            "coordinates": {
+                "latitude": 40.58663,
+                "longitude": -105.0786399
+            },
+            "transactions": [
+                "pickup",
+                "delivery"
+            ],
+            "price": "$$",
+            "location": {
+                "address1": "130 South Mason St",
+                "address2": null,
+                "address3": "",
+                "city": "Fort Collins",
+                "zip_code": "80524",
+                "country": "US",
+                "state": "CO",
+                "display_address": [
+                    "130 South Mason St",
+                    "Fort Collins, CO 80524"
+                ]
+            },
+            "phone": "+19706893508",
+            "display_phone": "(970) 689-3508",
+            "distance": 4040.7100171274865
+        },
+        {
+            "id": "KjFPurgALW0gK34aMoZvww",
+            "alias": "the-mayor-of-old-town-fort-collins",
+            "name": "The Mayor of Old Town",
+            "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/pc664M_SMN19Rax-Lwtmbg/o.jpg",
+            "is_closed": false,
+            "url": "https://www.yelp.com/biz/the-mayor-of-old-town-fort-collins?adjust_creative=yI6u1BFJxzRJ6HbsnJRmFQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=yI6u1BFJxzRJ6HbsnJRmFQ",
+            "review_count": 310,
+            "categories": [
+                {
+                    "alias": "newamerican",
+                    "title": "American (New)"
+                },
+                {
+                    "alias": "beerbar",
+                    "title": "Beer Bar"
+                },
+                {
+                    "alias": "wine_bars",
+                    "title": "Wine Bars"
+                }
+            ],
+            "rating": 4.5,
+            "coordinates": {
+                "latitude": 40.578894,
+                "longitude": -105.07848
+            },
+            "transactions": [
+                "delivery"
+            ],
+            "price": "$$",
+            "location": {
+                "address1": "632 S Mason St",
+                "address2": "",
+                "address3": "",
+                "city": "Fort Collins",
+                "zip_code": "80524",
+                "country": "US",
+                "state": "CO",
+                "display_address": [
+                    "632 S Mason St",
+                    "Fort Collins, CO 80524"
+                ]
+            },
+            "phone": "+19706822410",
+            "display_phone": "(970) 682-2410",
+            "distance": 3198.226611690018
+        },
+        {
+            "id": "GSffAChn9VqpIpDnYh693g",
+            "alias": "the-still-whiskey-steaks-fort-collins",
+            "name": "The Still Whiskey Steaks",
+            "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/1nFxZ8ZaKPxwk3YKOEPjnA/o.jpg",
+            "is_closed": false,
+            "url": "https://www.yelp.com/biz/the-still-whiskey-steaks-fort-collins?adjust_creative=yI6u1BFJxzRJ6HbsnJRmFQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=yI6u1BFJxzRJ6HbsnJRmFQ",
+            "review_count": 294,
+            "categories": [
+                {
+                    "alias": "steak",
+                    "title": "Steakhouses"
+                },
+                {
+                    "alias": "burgers",
+                    "title": "Burgers"
+                },
+                {
+                    "alias": "bars",
+                    "title": "Bars"
+                }
+            ],
+            "rating": 4.5,
+            "coordinates": {
+                "latitude": 40.58815,
+                "longitude": -105.0776
+            },
+            "transactions": [
+                "pickup",
+                "delivery"
+            ],
+            "price": "$$$",
+            "location": {
+                "address1": "151 N College Ave",
+                "address2": "",
+                "address3": null,
+                "city": "Fort Collins",
+                "zip_code": "80524",
+                "country": "US",
+                "state": "CO",
+                "display_address": [
+                    "151 N College Ave",
+                    "Fort Collins, CO 80524"
+                ]
+            },
+            "phone": "+19702944360",
+            "display_phone": "(970) 294-4360",
+            "distance": 4217.145128495346
+        },
+        {
+            "id": "tuIFAhfH-2gBoiEQ7S6-xg",
+            "alias": "obstacle-brewing-and-grill-fort-collins-2",
+            "name": "Obstacle Brewing and Grill",
+            "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/nRcc28WY8WsZF3eYnPkclg/o.jpg",
+            "is_closed": false,
+            "url": "https://www.yelp.com/biz/obstacle-brewing-and-grill-fort-collins-2?adjust_creative=yI6u1BFJxzRJ6HbsnJRmFQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=yI6u1BFJxzRJ6HbsnJRmFQ",
+            "review_count": 21,
+            "categories": [
+                {
+                    "alias": "brewpubs",
+                    "title": "Brewpubs"
+                },
+                {
+                    "alias": "tradamerican",
+                    "title": "American (Traditional)"
+                }
+            ],
+            "rating": 4.0,
+            "coordinates": {
+                "latitude": 40.523032,
+                "longitude": -105.080251
+            },
+            "transactions": [],
+            "price": "$$",
+            "location": {
+                "address1": "4613 S Mason St",
+                "address2": "Ste D1",
+                "address3": null,
+                "city": "Fort Collins",
+                "zip_code": "80525",
+                "country": "US",
+                "state": "CO",
+                "display_address": [
+                    "4613 S Mason St",
+                    "Ste D1",
+                    "Fort Collins, CO 80525"
+                ]
+            },
+            "phone": "+19706728496",
+            "display_phone": "(970) 672-8496",
+            "distance": 3069.6417565472743
+        },
+        {
+            "id": "9hh2rZFDobEGfgxbtiFxRQ",
+            "alias": "back-door-grill-fort-collins-fort-collins",
+            "name": "Back Door Grill - Fort Collins",
+            "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/Gs2jqjDywWXK9JxNVRTEuw/o.jpg",
+            "is_closed": false,
+            "url": "https://www.yelp.com/biz/back-door-grill-fort-collins-fort-collins?adjust_creative=yI6u1BFJxzRJ6HbsnJRmFQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=yI6u1BFJxzRJ6HbsnJRmFQ",
+            "review_count": 26,
+            "categories": [
+                {
+                    "alias": "tradamerican",
+                    "title": "American (Traditional)"
+                },
+                {
+                    "alias": "sportsbars",
+                    "title": "Sports Bars"
+                },
+                {
+                    "alias": "cocktailbars",
+                    "title": "Cocktail Bars"
+                }
+            ],
+            "rating": 4.0,
+            "coordinates": {
+                "latitude": 40.57841,
+                "longitude": -105.07868
+            },
+            "transactions": [
+                "pickup",
+                "delivery"
+            ],
+            "location": {
+                "address1": "130 W Laurel St",
+                "address2": "",
+                "address3": "",
+                "city": "Fort Collins",
+                "zip_code": "80524",
+                "country": "US",
+                "state": "CO",
+                "display_address": [
+                    "130 W Laurel St",
+                    "Fort Collins, CO 80524"
+                ]
+            },
+            "phone": "+19708932751",
+            "display_phone": "(970) 893-2751",
+            "distance": 3143.896120569322
+        },
+        {
+            "id": "WIO0DtW1-j_z9o8VW42PrA",
+            "alias": "choice-city-butcher-and-deli-fort-collins",
+            "name": "Choice City Butcher & Deli",
+            "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/laJp1MgqH0YDbTI0GSanhA/o.jpg",
+            "is_closed": false,
+            "url": "https://www.yelp.com/biz/choice-city-butcher-and-deli-fort-collins?adjust_creative=yI6u1BFJxzRJ6HbsnJRmFQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=yI6u1BFJxzRJ6HbsnJRmFQ",
+            "review_count": 399,
+            "categories": [
+                {
+                    "alias": "meats",
+                    "title": "Meat Shops"
+                },
+                {
+                    "alias": "delis",
+                    "title": "Delis"
+                },
+                {
+                    "alias": "butcher",
+                    "title": "Butcher"
+                }
+            ],
+            "rating": 4.0,
+            "coordinates": {
+                "latitude": 40.5843749,
+                "longitude": -105.0773904
+            },
+            "transactions": [
+                "pickup",
+                "delivery"
+            ],
+            "price": "$$",
+            "location": {
+                "address1": "104 W Olive St",
+                "address2": "",
+                "address3": "",
+                "city": "Fort Collins",
+                "zip_code": "80524",
+                "country": "US",
+                "state": "CO",
+                "display_address": [
+                    "104 W Olive St",
+                    "Fort Collins, CO 80524"
+                ]
+            },
+            "phone": "+19704902489",
+            "display_phone": "(970) 490-2489",
+            "distance": 3801.4884007067303
+        },
+        {
+            "id": "_4Y4YtKjhhXSYTw5CTc5jg",
+            "alias": "henrys-pub-loveland",
+            "name": "Henry's Pub",
+            "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/HjB4FsB3JSMApUCaIwrY2g/o.jpg",
+            "is_closed": false,
+            "url": "https://www.yelp.com/biz/henrys-pub-loveland?adjust_creative=yI6u1BFJxzRJ6HbsnJRmFQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=yI6u1BFJxzRJ6HbsnJRmFQ",
+            "review_count": 475,
+            "categories": [
+                {
+                    "alias": "tradamerican",
+                    "title": "American (Traditional)"
+                },
+                {
+                    "alias": "pubs",
+                    "title": "Pubs"
+                },
+                {
+                    "alias": "gastropubs",
+                    "title": "Gastropubs"
+                }
+            ],
+            "rating": 4.5,
+            "coordinates": {
+                "latitude": 40.39515,
+                "longitude": -105.07363
+            },
+            "transactions": [
+                "delivery",
+                "pickup",
+                "restaurant_reservation"
+            ],
+            "price": "$$",
+            "location": {
+                "address1": "234 E 4th St",
+                "address2": "",
+                "address3": "",
+                "city": "Loveland",
+                "zip_code": "80537",
+                "country": "US",
+                "state": "CO",
+                "display_address": [
+                    "234 E 4th St",
+                    "Loveland, CO 80537"
+                ]
+            },
+            "phone": "+19706131896",
+            "display_phone": "(970) 613-1896",
+            "distance": 17243.40580864338
+        },
+        {
+            "id": "daMdgnR0JbeNE-oHz0tQwQ",
+            "alias": "penrose-taphouse-and-eatery-fort-collins",
+            "name": "Penrose Taphouse & Eatery",
+            "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/VZIAfXSPNCLXS5mxp456Yw/o.jpg",
+            "is_closed": false,
+            "url": "https://www.yelp.com/biz/penrose-taphouse-and-eatery-fort-collins?adjust_creative=yI6u1BFJxzRJ6HbsnJRmFQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=yI6u1BFJxzRJ6HbsnJRmFQ",
+            "review_count": 93,
+            "categories": [
+                {
+                    "alias": "breweries",
+                    "title": "Breweries"
+                },
+                {
+                    "alias": "newamerican",
+                    "title": "American (New)"
+                }
+            ],
+            "rating": 4.0,
+            "coordinates": {
+                "latitude": 40.589486,
+                "longitude": -105.076697
+            },
+            "transactions": [
+                "delivery"
+            ],
+            "price": "$$",
+            "location": {
+                "address1": "216 N College Ave",
+                "address2": "Ste 110",
+                "address3": null,
+                "city": "Fort Collins",
+                "zip_code": "80524",
+                "country": "US",
+                "state": "CO",
+                "display_address": [
+                    "216 N College Ave",
+                    "Ste 110",
+                    "Fort Collins, CO 80524"
+                ]
+            },
+            "phone": "+19706728400",
+            "display_phone": "(970) 672-8400",
+            "distance": 4363.821430080136
+        },
+        {
+            "id": "elho88l7btqqvzI2eOLz2A",
+            "alias": "dc-oakes-brewhouse-and-eatery-fort-collins",
+            "name": "DC Oakes Brewhouse and Eatery",
+            "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/bRz4LHuLphXLqqTXIU6mjA/o.jpg",
+            "is_closed": false,
+            "url": "https://www.yelp.com/biz/dc-oakes-brewhouse-and-eatery-fort-collins?adjust_creative=yI6u1BFJxzRJ6HbsnJRmFQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=yI6u1BFJxzRJ6HbsnJRmFQ",
+            "review_count": 279,
+            "categories": [
+                {
+                    "alias": "tradamerican",
+                    "title": "American (Traditional)"
+                },
+                {
+                    "alias": "breweries",
+                    "title": "Breweries"
+                }
+            ],
+            "rating": 4.5,
+            "coordinates": {
+                "latitude": 40.52271395913869,
+                "longitude": -105.01171846678747
+            },
+            "transactions": [
+                "delivery"
+            ],
+            "price": "$$",
+            "location": {
+                "address1": "3581 E Harmony Rd",
+                "address2": "Ste 110",
+                "address3": null,
+                "city": "Fort Collins",
+                "zip_code": "80528",
+                "country": "US",
+                "state": "CO",
+                "display_address": [
+                    "3581 E Harmony Rd",
+                    "Ste 110",
+                    "Fort Collins, CO 80528"
+                ]
+            },
+            "phone": "+19702862076",
+            "display_phone": "(970) 286-2076",
+            "distance": 6136.018881831183
+        },
+        {
+            "id": "xnlcO0W440I__v-drl44Pg",
+            "alias": "culvers-fort-collins",
+            "name": "Culver's",
+            "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/wN9DigjLAwiEJDcXx9I_mg/o.jpg",
+            "is_closed": false,
+            "url": "https://www.yelp.com/biz/culvers-fort-collins?adjust_creative=yI6u1BFJxzRJ6HbsnJRmFQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=yI6u1BFJxzRJ6HbsnJRmFQ",
+            "review_count": 53,
+            "categories": [
+                {
+                    "alias": "burgers",
+                    "title": "Burgers"
+                },
+                {
+                    "alias": "hotdogs",
+                    "title": "Fast Food"
+                },
+                {
+                    "alias": "icecream",
+                    "title": "Ice Cream & Frozen Yogurt"
+                }
+            ],
+            "rating": 4.0,
+            "coordinates": {
+                "latitude": 40.575309753418,
+                "longitude": -105.057495117188
+            },
+            "transactions": [
+                "delivery"
+            ],
+            "price": "$",
+            "location": {
+                "address1": "918 S Lemay Ave",
+                "address2": "",
+                "address3": "",
+                "city": "Fort Collins",
+                "zip_code": "80524",
+                "country": "US",
+                "state": "CO",
+                "display_address": [
+                    "918 S Lemay Ave",
+                    "Fort Collins, CO 80524"
+                ]
+            },
+            "phone": "+19704933639",
+            "display_phone": "(970) 493-3639",
+            "distance": 3136.009333271362
+        },
+        {
+            "id": "jbPdgQaCulbf7wvE5TuqxQ",
+            "alias": "the-farmhouse-at-jessup-farm-fort-collins-2",
+            "name": "The Farmhouse at Jessup Farm",
+            "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/Pr1rxU4fml3pTvuZm-uB1w/o.jpg",
+            "is_closed": false,
+            "url": "https://www.yelp.com/biz/the-farmhouse-at-jessup-farm-fort-collins-2?adjust_creative=yI6u1BFJxzRJ6HbsnJRmFQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=yI6u1BFJxzRJ6HbsnJRmFQ",
+            "review_count": 346,
+            "categories": [
+                {
+                    "alias": "tradamerican",
+                    "title": "American (Traditional)"
+                },
+                {
+                    "alias": "bars",
+                    "title": "Bars"
+                },
+                {
+                    "alias": "breakfast_brunch",
+                    "title": "Breakfast & Brunch"
+                }
+            ],
+            "rating": 4.0,
+            "coordinates": {
+                "latitude": 40.5624499539437,
+                "longitude": -105.038733417238
+            },
+            "transactions": [
+                "delivery"
+            ],
+            "price": "$$",
+            "location": {
+                "address1": "1957 Jessup Dr",
+                "address2": "",
+                "address3": "",
+                "city": "Fort Collins",
+                "zip_code": "80525",
+                "country": "US",
+                "state": "CO",
+                "display_address": [
+                    "1957 Jessup Dr",
+                    "Fort Collins, CO 80525"
+                ]
+            },
+            "phone": "+19706318041",
+            "display_phone": "(970) 631-8041",
+            "distance": 3319.4998945705192
+        },
+        {
+            "id": "WJSZxjuJmVfjk564567zJQ",
+            "alias": "william-olivers-publick-house-fort-collins",
+            "name": "William Oliver's Publick House",
+            "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/fSTvd6Qsig4W6TSlZM7hQg/o.jpg",
+            "is_closed": false,
+            "url": "https://www.yelp.com/biz/william-olivers-publick-house-fort-collins?adjust_creative=yI6u1BFJxzRJ6HbsnJRmFQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=yI6u1BFJxzRJ6HbsnJRmFQ",
+            "review_count": 163,
+            "categories": [
+                {
+                    "alias": "pubs",
+                    "title": "Pubs"
+                },
+                {
+                    "alias": "gastropubs",
+                    "title": "Gastropubs"
+                }
+            ],
+            "rating": 4.5,
+            "coordinates": {
+                "latitude": 40.551731600898,
+                "longitude": -105.03714150889
+            },
+            "transactions": [
+                "delivery"
+            ],
+            "price": "$$",
+            "location": {
+                "address1": "2608 S Timberline Rd",
+                "address2": "Ste 108",
+                "address3": "",
+                "city": "Fort Collins",
+                "zip_code": "80525",
+                "country": "US",
+                "state": "CO",
+                "display_address": [
+                    "2608 S Timberline Rd",
+                    "Ste 108",
+                    "Fort Collins, CO 80525"
+                ]
+            },
+            "phone": "+19706803726",
+            "display_phone": "(970) 680-3726",
+            "distance": 3170.2166804134913
+        },
+        {
+            "id": "G04Rs1pDQgV4Jg3arpXdbw",
+            "alias": "avogadros-number-fort-collins",
+            "name": "Avogadro's Number",
+            "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/jFzlEJpdOd79RkZAVe6UgA/o.jpg",
+            "is_closed": false,
+            "url": "https://www.yelp.com/biz/avogadros-number-fort-collins?adjust_creative=yI6u1BFJxzRJ6HbsnJRmFQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=yI6u1BFJxzRJ6HbsnJRmFQ",
+            "review_count": 153,
+            "categories": [
+                {
+                    "alias": "tradamerican",
+                    "title": "American (Traditional)"
+                },
+                {
+                    "alias": "musicvenues",
+                    "title": "Music Venues"
+                },
+                {
+                    "alias": "pizza",
+                    "title": "Pizza"
+                }
+            ],
+            "rating": 4.0,
+            "coordinates": {
+                "latitude": 40.57969,
+                "longitude": -105.0792699
+            },
+            "transactions": [
+                "pickup",
+                "delivery"
+            ],
+            "price": "$",
+            "location": {
+                "address1": "605 S Mason St",
+                "address2": "",
+                "address3": "",
+                "city": "Fort Collins",
+                "zip_code": "80524",
+                "country": "US",
+                "state": "CO",
+                "display_address": [
+                    "605 S Mason St",
+                    "Fort Collins, CO 80524"
+                ]
+            },
+            "phone": "+19704935555",
+            "display_phone": "(970) 493-5555",
+            "distance": 3282.225860262146
+        },
+        {
+            "id": "ua0SAXhqpXvXt7jAQhXGkg",
+            "alias": "bad-daddys-burger-bar-johnstown-3",
+            "name": "Bad Daddy's Burger Bar",
+            "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/A640CMEJUvJzMaGQKVA0dQ/o.jpg",
+            "is_closed": false,
+            "url": "https://www.yelp.com/biz/bad-daddys-burger-bar-johnstown-3?adjust_creative=yI6u1BFJxzRJ6HbsnJRmFQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=yI6u1BFJxzRJ6HbsnJRmFQ",
+            "review_count": 166,
+            "categories": [
+                {
+                    "alias": "burgers",
+                    "title": "Burgers"
+                },
+                {
+                    "alias": "newamerican",
+                    "title": "American (New)"
+                },
+                {
+                    "alias": "bars",
+                    "title": "Bars"
+                }
+            ],
+            "rating": 4.0,
+            "coordinates": {
+                "latitude": 40.405609,
+                "longitude": -104.9819433
+            },
+            "transactions": [
+                "pickup",
+                "delivery"
+            ],
+            "price": "$$",
+            "location": {
+                "address1": "4928 Thompson Pkwy",
+                "address2": null,
+                "address3": null,
+                "city": "Johnstown",
+                "zip_code": "80534",
+                "country": "US",
+                "state": "CO",
+                "display_address": [
+                    "4928 Thompson Pkwy",
+                    "Johnstown, CO 80534"
+                ]
+            },
+            "phone": "+19706674978",
+            "display_phone": "(970) 667-4978",
+            "distance": 17895.18172953804
+        },
+        {
+            "id": "c12xlG_uGdR3GcvD_Poijg",
+            "alias": "rally5-crafted-eats-and-bar-fort-collins-2",
+            "name": "Rally5 Crafted Eats & Bar",
+            "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/5vHWyQH40Fp67uZuOsseBw/o.jpg",
+            "is_closed": false,
+            "url": "https://www.yelp.com/biz/rally5-crafted-eats-and-bar-fort-collins-2?adjust_creative=yI6u1BFJxzRJ6HbsnJRmFQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=yI6u1BFJxzRJ6HbsnJRmFQ",
+            "review_count": 146,
+            "categories": [
+                {
+                    "alias": "tradamerican",
+                    "title": "American (Traditional)"
+                },
+                {
+                    "alias": "tikibars",
+                    "title": "Tiki Bars"
+                }
+            ],
+            "rating": 4.5,
+            "coordinates": {
+                "latitude": 40.5237,
+                "longitude": -105.03423
+            },
+            "transactions": [
+                "pickup",
+                "delivery"
+            ],
+            "price": "$$",
+            "location": {
+                "address1": "2310 E Harmony Rd",
+                "address2": "Ste 101",
+                "address3": null,
+                "city": "Fort Collins",
+                "zip_code": "80528",
+                "country": "US",
+                "state": "CO",
+                "display_address": [
+                    "2310 E Harmony Rd",
+                    "Ste 101",
+                    "Fort Collins, CO 80528"
+                ]
+            },
+            "phone": "+19708932139",
+            "display_phone": "(970) 893-2139",
+            "distance": 4515.093414616712
+        }
+    ],
+    "total": 231,
+    "region": {
+        "center": {
+            "longitude": -105.07461547851562,
+            "latitude": 40.55028500164319
+        }
+    }
+}

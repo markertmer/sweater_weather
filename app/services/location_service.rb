@@ -8,7 +8,7 @@ class LocationService < ApplicationService
   def self.build_url(query)
     base = 'http://www.mapquestapi.com/geocoding/v1/address?'
     location = "location=#{query}&"
-    key = "appid=#{ENV['mapquest_key']}"
+    key = "key=#{ENV['mapquest_key']}"
 
     [base, location, key].join
   end
