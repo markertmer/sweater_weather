@@ -1,0 +1,426 @@
+{
+    "route": {
+        "hasTollRoad": false,
+        "hasBridge": true,
+        "boundingBox": {
+            "lr": {
+                "lng": -104.98484,
+                "lat": 39.73687
+            },
+            "ul": {
+                "lng": -105.082458,
+                "lat": 40.590782
+            }
+        },
+        "distance": 64.962,
+        "hasTimedRestriction": false,
+        "hasTunnel": false,
+        "hasHighway": true,
+        "computedWaypoints": [],
+        "routeError": {
+            "errorCode": -400,
+            "message": ""
+        },
+        "formattedTime": "01:03:57",
+        "sessionId": "6266c763-0137-6750-02b4-34e7-124a5eca1385",
+        "hasAccessRestriction": false,
+        "realTime": 5286,
+        "hasSeasonalClosure": false,
+        "hasCountryCross": false,
+        "fuelUsed": 3.33,
+        "legs": [
+            {
+                "hasTollRoad": false,
+                "hasBridge": true,
+                "destNarrative": "Proceed to FT COLLINS, CO.",
+                "distance": 64.962,
+                "hasTimedRestriction": false,
+                "hasTunnel": false,
+                "hasHighway": true,
+                "index": 0,
+                "formattedTime": "01:03:57",
+                "origIndex": 1,
+                "hasAccessRestriction": false,
+                "hasSeasonalClosure": false,
+                "hasCountryCross": false,
+                "roadGradeStrategy": [
+                    []
+                ],
+                "destIndex": 5,
+                "time": 3837,
+                "hasUnpaved": false,
+                "origNarrative": "Go west on E 13th Ave.",
+                "maneuvers": [
+                    {
+                        "distance": 0.109,
+                        "streets": [
+                            "N Sherman St"
+                        ],
+                        "narrative": "Start out going south on N Sherman St toward E 13th Ave.",
+                        "turnType": 0,
+                        "startPoint": {
+                            "lng": -104.984856,
+                            "lat": 39.738453
+                        },
+                        "index": 0,
+                        "formattedTime": "00:00:23",
+                        "directionName": "South",
+                        "maneuverNotes": [],
+                        "linkIds": [],
+                        "signs": [],
+                        "mapUrl": "http://www.mapquestapi.com/staticmap/v5/map?key=Gy11Rv1tBb2NzwTSHSQIh2g8zGGZPmID&size=225,160&locations=39.73845291137695,-104.98485565185547|marker-1||39.73687744140625,-104.9848403930664|marker-2||&center=39.7376651763916,-104.98484802246094&defaultMarker=none&zoom=13&rand=-645143208&session=6266c763-0137-6750-02b4-34e7-124a5eca1385",
+                        "transportMode": "AUTO",
+                        "attributes": 0,
+                        "time": 23,
+                        "iconUrl": "http://content.mqcdn.com/mqsite/turnsigns/icon-dirs-start_sm.gif",
+                        "direction": 4
+                    },
+                    {
+                        "distance": 0.581,
+                        "streets": [
+                            "E 13th Ave"
+                        ],
+                        "narrative": "Turn right onto E 13th Ave.",
+                        "turnType": 2,
+                        "startPoint": {
+                            "lng": -104.98484,
+                            "lat": 39.736877
+                        },
+                        "index": 1,
+                        "formattedTime": "00:01:25",
+                        "directionName": "West",
+                        "maneuverNotes": [],
+                        "linkIds": [],
+                        "signs": [],
+                        "mapUrl": "http://www.mapquestapi.com/staticmap/v5/map?key=Gy11Rv1tBb2NzwTSHSQIh2g8zGGZPmID&size=225,160&locations=39.73687744140625,-104.9848403930664|marker-2||39.73686981201172,-104.99573516845703|marker-3||&center=39.736873626708984,-104.99028778076172&defaultMarker=none&zoom=11&rand=-645143208&session=6266c763-0137-6750-02b4-34e7-124a5eca1385",
+                        "transportMode": "AUTO",
+                        "attributes": 0,
+                        "time": 85,
+                        "iconUrl": "http://content.mqcdn.com/mqsite/turnsigns/rs_right_sm.gif",
+                        "direction": 7
+                    },
+                    {
+                        "distance": 1.482,
+                        "streets": [
+                            "N Speer Blvd"
+                        ],
+                        "narrative": "Turn right onto N Speer Blvd.",
+                        "turnType": 2,
+                        "startPoint": {
+                            "lng": -104.995735,
+                            "lat": 39.73687
+                        },
+                        "index": 2,
+                        "formattedTime": "00:03:18",
+                        "directionName": "Northwest",
+                        "maneuverNotes": [],
+                        "linkIds": [],
+                        "signs": [],
+                        "mapUrl": "http://www.mapquestapi.com/staticmap/v5/map?key=Gy11Rv1tBb2NzwTSHSQIh2g8zGGZPmID&size=225,160&locations=39.73686981201172,-104.99573516845703|marker-3||39.75434494018555,-105.01036071777344|marker-4||&center=39.74560737609863,-105.00304794311523&defaultMarker=none&zoom=9&rand=-645143208&session=6266c763-0137-6750-02b4-34e7-124a5eca1385",
+                        "transportMode": "AUTO",
+                        "attributes": 1024,
+                        "time": 198,
+                        "iconUrl": "http://content.mqcdn.com/mqsite/turnsigns/rs_right_sm.gif",
+                        "direction": 2
+                    },
+                    {
+                        "distance": 57.944,
+                        "streets": [
+                            "I-25 N",
+                            "US-87 N"
+                        ],
+                        "narrative": "Merge onto I-25 N/US-87 N toward Ft Collins.",
+                        "turnType": 10,
+                        "startPoint": {
+                            "lng": -105.010361,
+                            "lat": 39.754345
+                        },
+                        "index": 3,
+                        "formattedTime": "00:50:50",
+                        "directionName": "North",
+                        "maneuverNotes": [],
+                        "linkIds": [],
+                        "signs": [
+                            {
+                                "extraText": "",
+                                "text": "25",
+                                "type": 1,
+                                "url": "http://icons.mqcdn.com/icons/rs1.png?n=25&d=NORTH",
+                                "direction": 1
+                            },
+                            {
+                                "extraText": "",
+                                "text": "87",
+                                "type": 2,
+                                "url": "http://icons.mqcdn.com/icons/rs2.png?n=87&d=NORTH",
+                                "direction": 1
+                            }
+                        ],
+                        "mapUrl": "http://www.mapquestapi.com/staticmap/v5/map?key=Gy11Rv1tBb2NzwTSHSQIh2g8zGGZPmID&size=225,160&locations=39.75434494018555,-105.01036071777344|marker-4||40.58137893676758,-105.00114440917969|marker-5||&center=40.16786193847656,-105.00575256347656&defaultMarker=none&zoom=4&rand=-645143208&session=6266c763-0137-6750-02b4-34e7-124a5eca1385",
+                        "transportMode": "AUTO",
+                        "attributes": 1152,
+                        "time": 3050,
+                        "iconUrl": "http://content.mqcdn.com/mqsite/turnsigns/rs_merge_right_sm.gif",
+                        "direction": 1
+                    },
+                    {
+                        "distance": 3.473,
+                        "streets": [
+                            "E Mulberry St",
+                            "CO-14 W"
+                        ],
+                        "narrative": "Merge onto E Mulberry St/CO-14 W via EXIT 269B toward Ft Collins.",
+                        "turnType": 10,
+                        "startPoint": {
+                            "lng": -105.001144,
+                            "lat": 40.581379
+                        },
+                        "index": 4,
+                        "formattedTime": "00:04:58",
+                        "directionName": "West",
+                        "maneuverNotes": [],
+                        "linkIds": [],
+                        "signs": [
+                            {
+                                "extraText": "",
+                                "text": "14",
+                                "type": 505,
+                                "url": "http://icons.mqcdn.com/icons/rs505.png?n=14&d=WEST",
+                                "direction": 7
+                            },
+                            {
+                                "extraText": "",
+                                "text": "269B",
+                                "type": 1001,
+                                "url": "http://icons.mqcdn.com/icons/rs1001.png?n=269B&d=RIGHT",
+                                "direction": 0
+                            }
+                        ],
+                        "mapUrl": "http://www.mapquestapi.com/staticmap/v5/map?key=Gy11Rv1tBb2NzwTSHSQIh2g8zGGZPmID&size=225,160&locations=40.58137893676758,-105.00114440917969|marker-5||40.58150100708008,-105.06327819824219|marker-6||&center=40.58143997192383,-105.03221130371094&defaultMarker=none&zoom=8&rand=-645143208&session=6266c763-0137-6750-02b4-34e7-124a5eca1385",
+                        "transportMode": "AUTO",
+                        "attributes": 1024,
+                        "time": 298,
+                        "iconUrl": "http://content.mqcdn.com/mqsite/turnsigns/rs_merge_right_sm.gif",
+                        "direction": 7
+                    },
+                    {
+                        "distance": 0.969,
+                        "streets": [
+                            "CO-14"
+                        ],
+                        "narrative": "Turn slight right onto Riverside Ave/CO-14. Continue to follow CO-14.",
+                        "turnType": 1,
+                        "startPoint": {
+                            "lng": -105.063278,
+                            "lat": 40.581501
+                        },
+                        "index": 5,
+                        "formattedTime": "00:02:07",
+                        "directionName": "Northwest",
+                        "maneuverNotes": [],
+                        "linkIds": [],
+                        "signs": [
+                            {
+                                "extraText": "",
+                                "text": "14",
+                                "type": 505,
+                                "url": "http://icons.mqcdn.com/icons/rs505.png?n=14",
+                                "direction": 0
+                            }
+                        ],
+                        "mapUrl": "http://www.mapquestapi.com/staticmap/v5/map?key=Gy11Rv1tBb2NzwTSHSQIh2g8zGGZPmID&size=225,160&locations=40.58150100708008,-105.06327819824219|marker-6||40.590782165527344,-105.07704162597656|marker-7||&center=40.58614158630371,-105.07015991210938&defaultMarker=none&zoom=10&rand=-645143208&session=6266c763-0137-6750-02b4-34e7-124a5eca1385",
+                        "transportMode": "AUTO",
+                        "attributes": 0,
+                        "time": 127,
+                        "iconUrl": "http://content.mqcdn.com/mqsite/turnsigns/rs_slight_right_sm.gif",
+                        "direction": 2
+                    },
+                    {
+                        "distance": 0.119,
+                        "streets": [
+                            "Cache La Poudre-north Park Byway",
+                            "N College Ave",
+                            "US-287 S"
+                        ],
+                        "narrative": "Turn left onto Cache La Poudre-north Park Byway/N College Ave/US-287 S.",
+                        "turnType": 6,
+                        "startPoint": {
+                            "lng": -105.077042,
+                            "lat": 40.590782
+                        },
+                        "index": 6,
+                        "formattedTime": "00:00:19",
+                        "directionName": "South",
+                        "maneuverNotes": [],
+                        "linkIds": [],
+                        "signs": [
+                            {
+                                "extraText": "",
+                                "text": "287",
+                                "type": 2,
+                                "url": "http://icons.mqcdn.com/icons/rs2.png?n=287&d=SOUTH",
+                                "direction": 4
+                            }
+                        ],
+                        "mapUrl": "http://www.mapquestapi.com/staticmap/v5/map?key=Gy11Rv1tBb2NzwTSHSQIh2g8zGGZPmID&size=225,160&locations=40.590782165527344,-105.07704162597656|marker-7||40.58905792236328,-105.07705688476562|marker-8||&center=40.58992004394531,-105.0770492553711&defaultMarker=none&zoom=12&rand=-645143208&session=6266c763-0137-6750-02b4-34e7-124a5eca1385",
+                        "transportMode": "AUTO",
+                        "attributes": 0,
+                        "time": 19,
+                        "iconUrl": "http://content.mqcdn.com/mqsite/turnsigns/rs_left_sm.gif",
+                        "direction": 4
+                    },
+                    {
+                        "distance": 0.285,
+                        "streets": [
+                            "Laporte Ave"
+                        ],
+                        "narrative": "Turn right onto Laporte Ave.",
+                        "turnType": 2,
+                        "startPoint": {
+                            "lng": -105.077057,
+                            "lat": 40.589058
+                        },
+                        "index": 7,
+                        "formattedTime": "00:00:37",
+                        "directionName": "West",
+                        "maneuverNotes": [],
+                        "linkIds": [],
+                        "signs": [],
+                        "mapUrl": "http://www.mapquestapi.com/staticmap/v5/map?key=Gy11Rv1tBb2NzwTSHSQIh2g8zGGZPmID&size=225,160&locations=40.58905792236328,-105.07705688476562|marker-8||40.58897018432617,-105.08245849609375|marker-9||&center=40.58901405334473,-105.07975769042969&defaultMarker=none&zoom=12&rand=-645143208&session=6266c763-0137-6750-02b4-34e7-124a5eca1385",
+                        "transportMode": "AUTO",
+                        "attributes": 0,
+                        "time": 37,
+                        "iconUrl": "http://content.mqcdn.com/mqsite/turnsigns/rs_right_sm.gif",
+                        "direction": 7
+                    },
+                    {
+                        "distance": 0,
+                        "streets": [],
+                        "narrative": "Welcome to FT COLLINS, CO.",
+                        "turnType": -1,
+                        "startPoint": {
+                            "lng": -105.082458,
+                            "lat": 40.58897
+                        },
+                        "index": 8,
+                        "formattedTime": "00:00:00",
+                        "directionName": "",
+                        "maneuverNotes": [],
+                        "linkIds": [],
+                        "signs": [],
+                        "transportMode": "AUTO",
+                        "attributes": 0,
+                        "time": 0,
+                        "iconUrl": "http://content.mqcdn.com/mqsite/turnsigns/icon-dirs-end_sm.gif",
+                        "direction": 0
+                    }
+                ],
+                "hasFerry": false
+            }
+        ],
+        "options": {
+            "arteryWeights": [],
+            "cyclingRoadFactor": 1,
+            "timeType": 0,
+            "useTraffic": false,
+            "returnLinkDirections": false,
+            "countryBoundaryDisplay": true,
+            "enhancedNarrative": false,
+            "locale": "en_US",
+            "tryAvoidLinkIds": [],
+            "drivingStyle": 2,
+            "doReverseGeocode": true,
+            "generalize": -1,
+            "mustAvoidLinkIds": [],
+            "sideOfStreetDisplay": true,
+            "routeType": "FASTEST",
+            "avoidTimedConditions": false,
+            "routeNumber": 0,
+            "shapeFormat": "raw",
+            "maxWalkingDistance": -1,
+            "destinationManeuverDisplay": true,
+            "transferPenalty": -1,
+            "narrativeType": "text",
+            "walkingSpeed": -1,
+            "urbanAvoidFactor": -1,
+            "stateBoundaryDisplay": true,
+            "unit": "M",
+            "highwayEfficiency": 22,
+            "maxLinkId": 0,
+            "maneuverPenalty": -1,
+            "avoidTripIds": [],
+            "filterZoneFactor": -1,
+            "manmaps": "true"
+        },
+        "locations": [
+            {
+                "dragPoint": false,
+                "displayLatLng": {
+                    "lng": -104.984856,
+                    "lat": 39.738453
+                },
+                "adminArea4": "Denver County",
+                "adminArea5": "Denver",
+                "postalCode": "",
+                "adminArea1": "US",
+                "adminArea3": "CO",
+                "type": "s",
+                "sideOfStreet": "N",
+                "geocodeQualityCode": "A5XAX",
+                "adminArea4Type": "County",
+                "linkId": 42409351,
+                "street": "",
+                "adminArea5Type": "City",
+                "geocodeQuality": "CITY",
+                "adminArea1Type": "Country",
+                "adminArea3Type": "State",
+                "latLng": {
+                    "lng": -104.984853,
+                    "lat": 39.738453
+                }
+            },
+            {
+                "dragPoint": false,
+                "displayLatLng": {
+                    "lng": -105.082458,
+                    "lat": 40.58897
+                },
+                "adminArea4": "Larimer County",
+                "adminArea5": "Ft Collins",
+                "postalCode": "",
+                "adminArea1": "US",
+                "adminArea3": "CO",
+                "type": "s",
+                "sideOfStreet": "N",
+                "geocodeQualityCode": "A5XAX",
+                "adminArea4Type": "County",
+                "linkId": 6086329,
+                "street": "",
+                "adminArea5Type": "City",
+                "geocodeQuality": "CITY",
+                "adminArea1Type": "Country",
+                "adminArea3Type": "State",
+                "latLng": {
+                    "lng": -105.082459,
+                    "lat": 40.588972
+                }
+            }
+        ],
+        "time": 3837,
+        "hasUnpaved": false,
+        "locationSequence": [
+            0,
+            1
+        ],
+        "hasFerry": false
+    },
+    "info": {
+        "statuscode": 0,
+        "copyright": {
+            "imageAltText": "© 2022 MapQuest, Inc.",
+            "imageUrl": "http://api.mqcdn.com/res/mqlogo.gif",
+            "text": "© 2022 MapQuest, Inc."
+        },
+        "messages": []
+    }
+}
