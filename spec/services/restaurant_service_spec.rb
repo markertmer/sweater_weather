@@ -16,7 +16,7 @@ RSpec.describe RestaurantService, type: :service do
   describe 'http requests' do
     before do
       @url = RestaurantService.build_url('fort collins, co', 'burgers')
-      yelp_response = File.read('spec/fixtures/yelp/good_request_response.json')
+      yelp_response = File.read('spec/fixtures/restaurants/good_request_response.json')
 
       stub_request(:get, @url).to_return(status: 200, body: yelp_response)
     end
