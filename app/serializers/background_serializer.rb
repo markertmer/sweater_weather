@@ -13,6 +13,6 @@ class BackgroundSerializer
           "unsplash_url": object.unsplash_url
         }
       }
-    }.to_json
+    }
   end
 end
