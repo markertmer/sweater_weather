@@ -10,4 +10,6 @@ Rails.application.routes.draw do
   get 'api/v1/backgrounds', to: 'backgrounds#show'
   get 'api/v1/forecast', to: 'forecast#show'
   get 'api/v1/munchies', to: 'munchies#show'
+
+  post 'api/v1/users', to: 'users#create'
 end
