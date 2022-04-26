@@ -11,6 +11,16 @@ class UsersController < ApplicationController
     end
   end
 
+  def login
+    user = User.find_by(email: params[:email])
+
+    if user == nil || !user.authenticate(params[:password])
+      render json: { message: 'Invalid credentials' }, status: 401
+    else
+      render json: UserSerializer.new_user_response(user), status: 200
+    end
+  end
+
   private
 
   def user_params
