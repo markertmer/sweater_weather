@@ -12,4 +12,5 @@ Rails.application.routes.draw do
   get 'api/v1/munchies', to: 'munchies#show'
 
   post 'api/v1/users', to: 'users#create'
+  post 'api/v1/sessions', to: 'users#login'
 end
