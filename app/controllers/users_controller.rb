@@ -5,7 +5,7 @@ class UsersController < ApplicationController
 
     if user.save
       user.update(api_key: generate_api_key)
-      render json: UserSerializer.new_user_response(user), status: 201
+      render json: UserSerializer.auth_response(user), status: 201
     else
       render json: { message: user.errors.full_messages.join(', ') }, status: 400
     end
@@ -17,7 +17,7 @@ class UsersController < ApplicationController
     if user == nil || !user.authenticate(params[:password])
       render json: { message: 'Invalid credentials' }, status: 401
     else
-      render json: UserSerializer.new_user_response(user), status: 200
+      render json: UserSerializer.auth_response(user), status: 200
     end
   end
 

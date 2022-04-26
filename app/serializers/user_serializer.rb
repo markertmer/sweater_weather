@@ -1,6 +1,6 @@
 class UserSerializer
 
-  def self.new_user_response(user)
+  def self.auth_response(user)
     {
       "data": {
         "type": "users",
