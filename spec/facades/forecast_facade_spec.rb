@@ -14,12 +14,18 @@ RSpec.describe ForecastFacade, type: :facade do
   it 'returns JSON data for location query' do
     output = ForecastFacade.get_forecast('chicago, il')
 
-    location_data = output[:data][:location]
+    data = output[:data]
+    expect(data[:id]).to eq "null"
+    expect(data[:type]).to eq "forecast"
+
+    attributes = data[:attributes]
+
+    location_data = attributes[:location]
     expect(location_data[:city]).to eq "Chicago"
     expect(location_data[:state]).to eq "IL"
     expect(location_data[:country]).to eq "US"
 
-    current_data = output[:data][:current]
+    current_data = attributes[:current]
     expect(current_data[:date]).to eq "April 23"
     expect(current_data[:description]).to eq "overcast clouds"
     expect(current_data[:feels_like_temp]).to eq 44
@@ -35,7 +41,7 @@ RSpec.describe ForecastFacade, type: :facade do
     expect(current_data[:uv_description]).to eq "low"
     expect(current_data[:visibility]).to eq 6.2
 
-    hourly_data = output[:data][:hourly]
+    hourly_data = attributes[:hourly]
     expect(hourly_data).to be_an Array
     expect(hourly_data.count).to eq 48
     first = hourly_data[0]
@@ -43,7 +49,7 @@ RSpec.describe ForecastFacade, type: :facade do
     expect(first[:temperature]).to eq 50
     expect(first[:icon_url]).to eq "http://openweathermap.org/img/wn/04d@2x.png"
 
-    daily_data = output[:data][:daily]
+    daily_data = attributes[:daily]
     expect(daily_data).to be_an Array
     expect(daily_data.count).to eq 8
     first = daily_data[0]
