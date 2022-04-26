@@ -2,6 +2,8 @@ require 'rails_helper'
 
 RSpec.describe 'Forecast Request', type: :request do
   before do
+    @headers = { 'CONTENT_TYPE' => 'application/json', 'Accept' => 'application/json' }
+
     url = LocationService.build_url('chicago, il')
     location_response = File.read('spec/fixtures/locations/good_request_response.json')
     stub_request(:get, url).to_return(status: 200, body: location_response)
@@ -12,19 +14,25 @@ RSpec.describe 'Forecast Request', type: :request do
   end
 
   it 'returns a successful response' do
-    get '/api/v1/forecast?location=chicago, il'
+    get '/api/v1/forecast?location=chicago, il', headers: @headers
 
     expect(response).to be_successful
     expect(response.status).to eq 200
 
-    result = JSON.parse(response.body, symbolize_names: true)
+    body = JSON.parse(response.body, symbolize_names: true)
 
-    location_data = result[:data][:location]
+    data = body[:data]
+    expect(data[:id]).to eq "null"
+    expect(data[:type]).to eq "forecast"
+
+    attributes = data[:attributes]
+
+    location_data = attributes[:location]
     expect(location_data[:city]).to eq "Chicago"
     expect(location_data[:state]).to eq "IL"
     expect(location_data[:country]).to eq "US"
 
-    current_data = result[:data][:current]
+    current_data = attributes[:current]
     expect(current_data[:date]).to eq "April 23"
     expect(current_data[:description]).to eq "overcast clouds"
     expect(current_data[:feels_like_temp]).to eq 44
@@ -40,7 +48,7 @@ RSpec.describe 'Forecast Request', type: :request do
     expect(current_data[:uv_description]).to eq "low"
     expect(current_data[:visibility]).to eq 6.2
 
-    hourly_data = result[:data][:hourly]
+    hourly_data = attributes[:hourly]
     expect(hourly_data).to be_an Array
     expect(hourly_data.count).to eq 48
     first = hourly_data[0]
@@ -48,7 +56,7 @@ RSpec.describe 'Forecast Request', type: :request do
     expect(first[:temperature]).to eq 50
     expect(first[:icon_url]).to eq "http://openweathermap.org/img/wn/04d@2x.png"
 
-    daily_data = result[:data][:daily]
+    daily_data = attributes[:daily]
     expect(daily_data).to be_an Array
     expect(daily_data.count).to eq 8
     first = daily_data[0]
@@ -62,7 +70,7 @@ RSpec.describe 'Forecast Request', type: :request do
   end
 
   it 'sad path: missing query' do
-    get '/api/v1/forecast?location='
+    get '/api/v1/forecast?location=', headers: @headers
 
     expect(response.status).to eq 400
 
@@ -73,7 +81,7 @@ RSpec.describe 'Forecast Request', type: :request do
   end
 
   it 'sad path: missing location key' do
-    get '/api/v1/forecast'
+    get '/api/v1/forecast', headers: @headers
 
     expect(response.status).to eq 400
 
@@ -84,7 +92,7 @@ RSpec.describe 'Forecast Request', type: :request do
   end
 
   it 'sad path: irrelevant key provided' do
-    get '/api/v1/forecast?foo=bar'
+    get '/api/v1/forecast?foo=bar', headers: @headers
 
     expect(response.status).to eq 400
 
@@ -100,7 +108,7 @@ RSpec.describe 'Forecast Request', type: :request do
     parsed = JSON.parse(location_response_2)
     stub_request(:get, url_2).to_return(status: 200, body: parsed)
 
-    get '/api/v1/forecast?location=xxxxxxx'
+    get '/api/v1/forecast?location=xxxxxxx', headers: @headers
 
     expect(response.status).to eq 404
 
@@ -111,19 +119,25 @@ RSpec.describe 'Forecast Request', type: :request do
   end
 
   it 'edge case: irrelevant key provided along with valid location' do
-    get '/api/v1/forecast?foo=bar&location=chicago, il'
+    get '/api/v1/forecast?foo=bar&location=chicago, il', headers: @headers
 
     expect(response).to be_successful
     expect(response.status).to eq 200
 
-    result = JSON.parse(response.body, symbolize_names: true)
+    body = JSON.parse(response.body, symbolize_names: true)
 
-    location_data = result[:data][:location]
+    data = body[:data]
+    expect(data[:id]).to eq "null"
+    expect(data[:type]).to eq "forecast"
+
+    attributes = data[:attributes]
+
+    location_data = attributes[:location]
     expect(location_data[:city]).to eq "Chicago"
     expect(location_data[:state]).to eq "IL"
     expect(location_data[:country]).to eq "US"
 
-    current_data = result[:data][:current]
+    current_data = attributes[:current]
     expect(current_data[:date]).to eq "April 23"
     expect(current_data[:description]).to eq "overcast clouds"
     expect(current_data[:feels_like_temp]).to eq 44
@@ -139,7 +153,7 @@ RSpec.describe 'Forecast Request', type: :request do
     expect(current_data[:uv_description]).to eq "low"
     expect(current_data[:visibility]).to eq 6.2
 
-    hourly_data = result[:data][:hourly]
+    hourly_data = attributes[:hourly]
     expect(hourly_data).to be_an Array
     expect(hourly_data.count).to eq 48
     first = hourly_data[0]
@@ -147,7 +161,7 @@ RSpec.describe 'Forecast Request', type: :request do
     expect(first[:temperature]).to eq 50
     expect(first[:icon_url]).to eq "http://openweathermap.org/img/wn/04d@2x.png"
 
-    daily_data = result[:data][:daily]
+    daily_data = attributes[:daily]
     expect(daily_data).to be_an Array
     expect(daily_data.count).to eq 8
     first = daily_data[0]
