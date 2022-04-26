@@ -43,5 +43,27 @@ RSpec.describe DestinationService, type: :service do
 
       expect(destination).to eq "Ft Collins, CO"
     end
+
+  end
+
+  describe 'sad paths' do
+    it 'impossible driving route' do
+      url = DestinationService.build_url('new york, ny', 'london, england')
+      response_body = File.read('spec/fixtures/destinations/no_route_response.json')
+
+      stub_request(:get, url).to_return(status: 200, body: response_body)
+
+      response = DestinationService.get_destination('new york, ny', 'london, england')
+
+      route = response[:route]
+      expect(route.keys).to include :routeError
+
+      status = response[:info][:statuscode]
+      expect(status).to eq 402
+
+      message = response[:info][:messages][0]
+      expect(message).to eq "We are unable to route with the given locations."
+
+    end
   end
 end
