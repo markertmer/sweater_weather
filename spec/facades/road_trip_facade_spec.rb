@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe MunchieFacade, type: :facade do
+RSpec.describe RoadTripFacade, type: :facade do
   before do
     url = DestinationService.build_url('denver, co', 'fort collins, co')
     location_response = File.read('spec/fixtures/destinations/good_request_response.json')
