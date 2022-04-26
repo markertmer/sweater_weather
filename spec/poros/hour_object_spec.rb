@@ -14,6 +14,7 @@ RSpec.describe HourObject, type: :poro do
 
     expect(object).to be_instance_of HourObject
 
+    expect(object.description).to eq "overcast clouds"
     expect(object.icon_url).to eq "http://openweathermap.org/img/wn/04d@2x.png"
     expect(object.temperature).to eq 50
     expect(object.time).to eq "7:00 PM"
