@@ -68,7 +68,7 @@ $ rails s
 
 Using a tool such as [Postman](https://www.postman.com/), you can send HTTP requests to the API according to the following guidelines.
 
-### Authentication
+### 1. Authentication
 New users may register for an API key, which is required for some features.
 
 To register with Sweater Weather, send a `POST` request to this URI, prepended with your local server, such as `http://localhost:3000`:
@@ -110,7 +110,7 @@ Existing users can retrieve their API key with this `POST` request...
 }
 ```
 
-### Forecast
+### 2. Forecast
 This `GET` request will obtain weather forecast data for the `location` entered in the params. For example:
 ```
 /api/v1/forecast?location=boise,id
@@ -168,7 +168,7 @@ The response will look like this:
 }
 ```
 
-### Background Image
+### 3. Background Image
 Use this `GET` request to obtain a link to a relevant image to be used for the forecast background of the city specified in the `location` param. For example:
 ```
 /api/v1/backgrounds?location=grandjunction,co
@@ -195,7 +195,7 @@ The response body will look like this:
 ```
 *** You MUST credit photos according to the Unsplash API [guidelines](https://unsplash.com/documentation#guidelines--crediting). 
 
-### Munchies
+### 4, Munchies
 This `GET` request will provide a restaurant at your destination, along with the local forecast for the day of your arrival. It requires parameters for `start` and `destination` locations, along with a `food` type search query, such as "Mexican" or "BBQ". Example:
 ```
 /api/v1/munchies?start=lafayette,in&destination=nashville,tn&food=bbq
@@ -222,7 +222,7 @@ Response:
 }
 ```
 
-### Road Trip
+### 5. Road Trip
 A `POST` request. Supply an `origin` and `destination` to obtain the travel time and local weather forecast data for the arrival time and destination. Example:
 ```
 /api/v1/road_trip
