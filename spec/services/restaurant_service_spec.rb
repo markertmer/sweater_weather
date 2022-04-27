@@ -2,27 +2,20 @@ require 'rails_helper'
 
 RSpec.describe RestaurantService, type: :service do
 
-  it 'builds a url' do
-    base = 'https://api.yelp.com/v3/businesses/search?'
-    location = "location=fort collins, co&"
-    category = "category=restaurants"
-    search = "term=burgers"
-
-    expected = [base, location, search].join
-
-    expect(RestaurantService.build_url('fort collins, co', 'burgers')).to eq expected
-  end
-
-  describe 'http requests' do
+  describe 'happy paths' do
     before do
-      @url = RestaurantService.build_url('fort collins, co', 'burgers')
+      @url = build_restaurant_url('fort collins, co', 'burgers')
       yelp_response = File.read('spec/fixtures/restaurants/good_request_response.json')
 
       stub_request(:get, @url).to_return(status: 200, body: yelp_response)
     end
 
     it 'gets a response' do
-      response = RestaurantService.get_yelp_data(@url)
+      url = RestaurantService.url
+      params = RestaurantService.restaurant_params('fort collins, co', 'burgers')
+      headers = RestaurantService.headers
+      conn = RestaurantService.faraday_req(url, params, headers)
+      response = conn.get
       expect(response.status).to eq 200
     end
 
