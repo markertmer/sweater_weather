@@ -84,7 +84,7 @@ A JSON payload must be sent in the body of this request to set the user's email 
 ```
 
 The response will include your unique Sweater Weather API key in the body:
-```
+```JSON
 {
     "data": {
         "type": "users",
@@ -102,7 +102,7 @@ Existing users can retrieve their API key with this `POST` request...
 /api/v1/sessions
 ```
 ... and this body:
-```
+```JSON
 {
   "email": "man@dude.com",
   "password": "abc.123"
@@ -115,7 +115,7 @@ This `GET` request will obtain weather forecast data for the `location` entered 
 /api/v1/forecast?location=boise,id
 ```
 The response will look like this:
-```
+```JSON
 {
     "data": {
         "id": "null",
@@ -172,8 +172,8 @@ Use this `GET` request to obtain a link to a relevant image to be used for the f
 ```
 /api/v1/backgrounds?location=grandjunction,co
 ```
-The response will look like this:
-```
+The response body will look like this:
+```JSON
 {
     "data": {
         "id": "null",
@@ -200,7 +200,7 @@ This `GET` request will provide a restaurant at your destination, along with the
 /api/v1/munchies?start=lafayette,in&destination=nashville,tn&food=bbq
 ```
 Response:
-```
+```JSON
 {
     "data": {
         "id": "null",
@@ -227,15 +227,15 @@ A `POST` request. Supply an `origin` and `destination` to obtain the travel time
 /api/v1/road_trip
 ```
 Include the locations, along with your Sweater Weather `api_key`, in the body of your request like so:
-```
+```JSON
 {
   "origin": "seattle, wa",
   "destination": "louisville, ky",
   "api_key": "TZRAZA4QI0E3HW3T61U2H3VW06F32KYR2KAOST070DD0XIY1Z0OXHUCRBEN7AGLIXKFAX"
 }
 ```
-The response will look like this:
-```
+The response will look something like this:
+```JSON
 {
     "data": {
         "id": "null",
