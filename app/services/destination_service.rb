@@ -1,16 +1,20 @@
 class DestinationService < ApplicationService
+  class << self
 
-  def self.get_destination(start, finish)
-    url = build_url(start, finish)
-    response = get_data(url)
-  end
+    def get_destination(start, finish)
+      get_response_body(url, destination_params(start, finish))
+    end
 
-  def self.build_url(start, finish)
-    base = 'http://www.mapquestapi.com/directions/v2/route?'
-    key = "key=#{ENV['mapquest_key']}&"
-    from = "from=#{start}&"
-    to = "to=#{finish}"
+    def url
+      'http://www.mapquestapi.com/directions/v2/route'
+    end
 
-    [base, key, from, to].join
+    def destination_params(start, finish)
+      {
+        "from": start,
+        "to": finish,
+        "key": ENV['mapquest_key']
+      }
+    end
   end
 end
