@@ -34,7 +34,7 @@ $ rails db:create
 $ rails db:migrate
 ```
 
-Create an `application.yml` file using Figaro, then open it for editing:
+Create an `application.yml` file using Figaro, then open it for editing. The file is git-ignored, so it may not show up in your GUI.
 ```
 $ bundle exec figaro install
 $ (open in your text editor) config/application.yml
@@ -48,7 +48,7 @@ mapquest_key: your_mapquest_key
 yelp_key: your_yelp_key
 ```
 
-Ensure all tests are passing:
+Ensure all tests are passing.
 ```
 $ bundle exec rspec
 => ..........................................................................
@@ -59,7 +59,7 @@ $ bundle exec rspec
 => Coverage report generated for RSpec to /Users/markertmer/turing/3module/projects/sweater_weather/coverage. 1392 / 1397 LOC (99.64%) covered.
 ```
 
-You should now be able to establish a local server to answer requests:
+You should now be able to establish a local server to start answering requests.
 ```
 $ rails s
 ```
@@ -71,7 +71,7 @@ Using a tool such as [Postman](https://www.postman.com/), you can send HTTP requ
 ### 1. Authentication
 New users may register for an API key, which is required for some features.
 
-To register with Sweater Weather, send a `POST` request to this URI, prepended with your local server, such as `http://localhost:3000`:
+To register with Sweater Weather, send a `POST` request to this URI, prepended with your local server, such as `http://localhost:3000`.
 ```
 api/v1/users
 ```
@@ -84,7 +84,7 @@ A JSON payload must be sent in the body of this request to set the user's email 
 }
 ```
 
-The response will include your unique Sweater Weather API key in the body:
+The response will include your unique Sweater Weather API key in the body.
 ```JSON
 {
     "data": {
@@ -169,7 +169,7 @@ The response will look like this:
 ```
 
 ### 3. Background Image
-Use this `GET` request to obtain a link to a relevant image to be used for the forecast background of the city specified in the `location` param. For example:
+Use this `GET` request to obtain a link to a relevant image to be used for the forecast background of the city specified in the `location` param.
 ```
 /api/v1/backgrounds?location=grandjunction,co
 ```
@@ -193,10 +193,10 @@ The response body will look like this:
     }
 }
 ```
-*** You MUST credit photos according to the Unsplash API [guidelines](https://unsplash.com/documentation#guidelines--crediting). 
+**NOTICE:** You MUST credit photos according to the Unsplash API [guidelines](https://unsplash.com/documentation#guidelines--crediting). 
 
-### 4, Munchies
-This `GET` request will provide a restaurant at your destination, along with the local forecast for the day of your arrival. It requires parameters for `start` and `destination` locations, along with a `food` type search query, such as "Mexican" or "BBQ". Example:
+### 4. Munchies
+This `GET` request will provide a restaurant at your destination, along with the local forecast for the day of your arrival. It requires parameters for `start` and `destination` locations, along with a `food` type search query, such as `fast food`, `barbecue`, `tapas`, `olive garden`, `sushi`, `gyros`, `pizza`, or `mexican`. __**It's MMMMMunchilicious!<sup>TM</sup>**__
 ```
 /api/v1/munchies?start=lafayette,in&destination=nashville,tn&food=bbq
 ```
