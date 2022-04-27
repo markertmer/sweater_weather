@@ -34,23 +34,23 @@ RSpec.describe LocationService, type: :service do
       expect(coordinates[:lat]).to eq 41.883229
       expect(coordinates[:lng]).to eq -87.632398
     end
+  end
 
-    describe 'sad paths' do
-      it 'bad request: location missing' do
+  describe 'sad paths' do
+    it 'bad request: location missing' do
 
-        url = build_location_url('')
+      url = build_location_url('')
 
-        location_response = File.read('spec/fixtures/locations/bad_request_response.json')
-        stub_request(:get, url).to_return(status: 200, body: location_response)
+      location_response = File.read('spec/fixtures/locations/bad_request_response.json')
+      stub_request(:get, url).to_return(status: 200, body: location_response)
 
-        response = LocationService.get_location('')
+      response = LocationService.get_location('')
 
-        status = response[:info][:statuscode]
-        expect(status).to eq 400
+      status = response[:info][:statuscode]
+      expect(status).to eq 400
 
-        results = response[:results][0][:locations][0]
-        expect(results).to eq nil
-      end
+      results = response[:results][0][:locations][0]
+      expect(results).to eq nil
     end
   end
 end
