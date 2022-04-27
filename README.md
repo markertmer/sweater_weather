@@ -40,7 +40,7 @@ $ (open in your text editor) config/application.yml
 ```
 
 Add your API credentials to `application.yml` file using the syntax shown:
-```
+```YML
 unsplash_key: your_unsplash_key
 openweather_key: your_openweather_key
 mapquest_key: your_mapquest_key
@@ -75,7 +75,7 @@ To register with Sweater Weather, send a `POST` request to this URI, prepended w
 api/v1/users
 ```
 A JSON payload must be sent in the body of this request to set the user's email and password:
-```
+```JSON
 {
   "email": "man@dude.com",
   "password": "abc123",
