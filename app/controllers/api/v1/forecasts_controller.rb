@@ -1,4 +1,4 @@
-class ForecastController < ApplicationController
+class Api::V1::ForecastsController < ApplicationController
 
   def show
     if params[:location] == "" || params[:location] == nil
