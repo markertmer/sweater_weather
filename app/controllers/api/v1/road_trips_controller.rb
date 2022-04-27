@@ -1,9 +1,9 @@
-class RoadTripsController < ApplicationController
+class Api::V1::RoadTripsController < ApplicationController
 
   before_action :require_api_key
 
   def show
-  
+
     if params[:origin] == "" || params[:origin] == nil ||
     params[:destination] == "" || params[:destination] == nil
       bad_request
