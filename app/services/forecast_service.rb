@@ -1,16 +1,22 @@
 class ForecastService < ApplicationService
+  class << self
 
-  def self.get_forecast(lat, lon)
-    url = build_url(lat, lon)
-    get_data(url)
-  end
+    def get_forecast(lat, lon)
+      get_response_body(url, forecast_params(lat, lon))
+    end
 
-  def self.build_url(lat, lon)
-    base = 'https://api.openweathermap.org/data/2.5/onecall?'
-    location = "lat=#{lat}&lon=#{lon}&"
-    options = 'exclude=minutely&units=imperial&'
-    key = "appid=#{ENV['openweather_key']}"
+    def url
+      'https://api.openweathermap.org/data/2.5/onecall'
+    end
 
-    [base, location, options, key].join
+    def forecast_params(lat, lon)
+      {
+        "lat": lat,
+        "lon": lon,
+        "exclude": "minutely",
+        "units": "imperial",
+        "appid": ENV['openweather_key']
+      }
+    end
   end
 end

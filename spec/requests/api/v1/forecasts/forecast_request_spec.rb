@@ -4,11 +4,11 @@ RSpec.describe 'Forecast Request', type: :request do
   before do
     @headers = { 'CONTENT_TYPE' => 'application/json', 'Accept' => 'application/json' }
 
-    url = LocationService.build_url('chicago, il')
+    url = build_location_url('chicago, il')
     location_response = File.read('spec/fixtures/locations/good_request_response.json')
     stub_request(:get, url).to_return(status: 200, body: location_response)
 
-    url = ForecastService.build_url('41.883229', '-87.632398')
+    url = build_forecast_url('41.883229', '-87.632398')
     forecast_response = File.read('spec/fixtures/forecasts/good_request_response.json')
     stub_request(:get, url).to_return(status: 200, body: forecast_response)
   end
@@ -103,7 +103,7 @@ RSpec.describe 'Forecast Request', type: :request do
   end
 
   it 'sad path: no results found' do
-    url_2 = LocationService.build_url('xxxxxxx')
+    url_2 = build_location_url('xxxxxxx')
     location_response_2 = File.read('spec/fixtures/locations/no_results_response.json')
     parsed = JSON.parse(location_response_2)
     stub_request(:get, url_2).to_return(status: 200, body: parsed)
