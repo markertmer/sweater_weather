@@ -263,8 +263,8 @@ $ rails dev cache
 
 The Sweater Weather API will be deployed via [Heroku](herokuapp.com) very soon! Check back here for updates.
 
-## Sweater Weather was built with the help of these tools:
-
+## Tools
+Sweater Weather was built with the help of these tools:
   - [Postman](https://www.postman.com/) - Used for testing HTTP requests in the local dev environment.
   - [Webmock](https://github.com/bblimke/webmock) - This gem was particularly helpful in stubbing HTTP requests for the project's [RSpec](https://rubygems.org/gems/rspec/versions/3.5.0) testing suite.
   - [Atom](https://atom.io/) - Because I don't know any better! But it proved to be a robust tool for supporting a dynamic workflow while editing this project and referencing 10+ other repos that were kept open for the duration of the v1 build. 
