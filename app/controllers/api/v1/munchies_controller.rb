@@ -1,4 +1,4 @@
-class MunchiesController < ApplicationController
+class Api::V1::MunchiesController < ApplicationController
 
   def show
     if params[:start] == "" || params[:start] == nil ||
