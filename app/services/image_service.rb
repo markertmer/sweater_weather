@@ -2,7 +2,9 @@ class ImageService < ApplicationService
   class << self
 
     def get_image(location)
-      get_response_body(url, image_params(location))
+      Rails.cache.fetch("get_location_#{location}", expires_in: 7.days) do
+        get_response_body(url, image_params(location))
+      end
     end
 
     def url

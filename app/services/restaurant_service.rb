@@ -1,7 +1,9 @@
 class RestaurantService < ApplicationService
   class << self
     def get_restaurant(location, query)
-      get_response_body(url, restaurant_params(location, query), headers)
+      Rails.cache.fetch("get_restaurant_#{location}_#{query}", expires_in: 7.days) do
+        get_response_body(url, restaurant_params(location, query), headers)
+      end
     end
 
     def url
