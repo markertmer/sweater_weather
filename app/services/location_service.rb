@@ -1,15 +1,19 @@
 class LocationService < ApplicationService
+  class << self
 
-  def self.get_location(query)
-    url = build_url(query)
-    get_data(url)
-  end
+    def get_location(query)
+      get_response_body(url, location_params(query))
+    end
 
-  def self.build_url(query)
-    base = 'http://www.mapquestapi.com/geocoding/v1/address?'
-    location = "location=#{query}&"
-    key = "key=#{ENV['mapquest_key']}"
+    def url
+      'http://www.mapquestapi.com/geocoding/v1/address'
+    end
 
-    [base, location, key].join
+    def location_params(query)
+      {
+        "location": query,
+        "key": ENV['mapquest_key']
+      }
+    end
   end
 end

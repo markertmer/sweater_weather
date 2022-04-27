@@ -4,7 +4,7 @@ RSpec.describe 'Background Request', type: :request do
   before do
     @headers = { 'CONTENT_TYPE' => 'application/json', 'Accept' => 'application/json' }
 
-    url_1 = ImageService.build_url('chicago, il')
+    url_1 = build_image_url('chicago, il')
     image_response_1 = File.read('spec/fixtures/images/good_request_response.json')
     stub_request(:get, url_1).to_return(status: 200, body: image_response_1)
   end
@@ -65,7 +65,7 @@ RSpec.describe 'Background Request', type: :request do
   end
 
   it 'sad path: no results found' do
-    url_2 = ImageService.build_url('9987ITYNxx')
+    url_2 = build_image_url('9987ITYNxx')
     image_response_2 = File.read('spec/fixtures/images/bad_request_response.json')
     stub_request(:get, url_2).to_return(status: 200, body: image_response_2)
 

@@ -2,27 +2,19 @@ require 'rails_helper'
 
 RSpec.describe LocationService, type: :service do
 
-  it 'builds a url' do
-    base = 'http://www.mapquestapi.com/geocoding/v1/address?'
-    location = "location=chicago, il&"
-    key = "key=#{ENV['mapquest_key']}"
-
-    expected = [base, location, key].join
-
-    expect(LocationService.build_url('chicago, il')).to eq expected
-  end
-
-  describe 'http requests' do
+  describe 'happy paths' do
     before do
-      @url = LocationService.build_url('chicago, il')
+      @url = build_location_url('chicago, il')
 
       location_response = File.read('spec/fixtures/locations/good_request_response.json')
-
       stub_request(:get, @url).to_return(status: 200, body: location_response)
     end
 
     it 'gets a response' do
-      response = LocationService.send_request(@url)
+      params = LocationService.location_params('chicago, il')
+      url = LocationService.url
+      conn = LocationService.faraday_req(url, params)
+      response = conn.get
       expect(response.status).to eq 200
     end
 
@@ -43,20 +35,22 @@ RSpec.describe LocationService, type: :service do
       expect(coordinates[:lng]).to eq -87.632398
     end
 
-    it 'sad path: bad request' do
-      location_response = File.read('spec/fixtures/locations/bad_request_response.json')
+    describe 'sad paths' do
+      it 'bad request: location missing' do
 
-      url = LocationService.build_url('')
-      stub_request(:get, url).to_return(status: 200, body: location_response)
+        url = build_location_url('')
 
-      response = LocationService.get_location('')
+        location_response = File.read('spec/fixtures/locations/bad_request_response.json')
+        stub_request(:get, url).to_return(status: 200, body: location_response)
 
-      status = response[:info][:statuscode]
-      expect(status).to eq 400
+        response = LocationService.get_location('')
 
-      results = response[:results][0][:locations][0]
+        status = response[:info][:statuscode]
+        expect(status).to eq 400
 
-      expect(results).to eq nil
+        results = response[:results][0][:locations][0]
+        expect(results).to eq nil
+      end
     end
   end
 end

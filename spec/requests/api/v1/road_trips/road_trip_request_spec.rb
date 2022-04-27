@@ -12,15 +12,15 @@ RSpec.describe 'Road Trip Request', type: :request do
       "api_key": "945V86HV2349586VY243982V56987V5698VB2695087B62N08"
     }.to_json
 
-    url = DestinationService.build_url('denver, co', 'fort collins, co')
+    url = build_destination_url('denver, co', 'fort collins, co')
     location_response = File.read('spec/fixtures/destinations/good_request_response.json')
     stub_request(:get, url).to_return(status: 200, body: location_response)
 
-    url = LocationService.build_url('Ft Collins, CO')
+    url = build_location_url('Ft Collins, CO')
     location_response = File.read('spec/fixtures/locations/good_request_response.json')
     stub_request(:get, url).to_return(status: 200, body: location_response)
 
-    url = ForecastService.build_url('41.883229', '-87.632398')
+    url = build_forecast_url('41.883229', '-87.632398')
     forecast_response = File.read('spec/fixtures/forecasts/good_request_response.json')
     stub_request(:get, url).to_return(status: 200, body: forecast_response)
   end

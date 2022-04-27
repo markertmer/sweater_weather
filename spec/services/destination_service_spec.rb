@@ -1,28 +1,19 @@
 require 'rails_helper'
 
 RSpec.describe DestinationService, type: :service do
-
-  it 'builds a url' do
-    base = 'http://www.mapquestapi.com/directions/v2/route?'
-    key = "key=#{ENV['mapquest_key']}&"
-    from = "from=denver, co&"
-    to = "to=fort collins, co"
-
-    expected = [base, key, from, to].join
-
-    expect(DestinationService.build_url('denver, co', 'fort collins, co')).to eq expected
-  end
-
-  describe 'http requests' do
+  describe 'happy paths' do
     before do
-      @url = DestinationService.build_url('denver, co', 'fort collins, co')
+      @url = build_destination_url('denver, co', 'fort collins, co')
       response_body = File.read('spec/fixtures/destinations/good_request_response.json')
 
       stub_request(:get, @url).to_return(status: 200, body: response_body)
     end
 
     it 'gets a response' do
-      response = DestinationService.send_request(@url)
+      params = DestinationService.destination_params('denver, co', 'fort collins, co')
+      url = DestinationService.url
+      conn = DestinationService.faraday_req(url, params)
+      response = conn.get
       expect(response.status).to eq 200
     end
 
@@ -48,7 +39,7 @@ RSpec.describe DestinationService, type: :service do
 
   describe 'sad paths' do
     it 'impossible driving route' do
-      url = DestinationService.build_url('new york, ny', 'london, england')
+      url = build_destination_url('new york, ny', 'london, england')
       response_body = File.read('spec/fixtures/destinations/no_route_response.json')
 
       stub_request(:get, url).to_return(status: 200, body: response_body)
@@ -63,7 +54,6 @@ RSpec.describe DestinationService, type: :service do
 
       message = response[:info][:messages][0]
       expect(message).to eq "We are unable to route with the given locations."
-
     end
   end
 end

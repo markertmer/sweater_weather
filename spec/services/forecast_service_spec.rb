@@ -1,21 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe ForecastService, type: :service do
-
-  it 'builds a url' do
-    base = 'https://api.openweathermap.org/data/2.5/onecall?'
-    location = "lat=40.609102&lon=-105.13186&"
-    options = 'exclude=minutely&units=imperial&'
-    key = "appid=#{ENV['openweather_key']}"
-
-    expected = [base, location, options, key].join
-
-    expect(ForecastService.build_url('40.609102', '-105.13186')).to eq expected
-  end
-
-  describe 'http requests' do
+  describe 'happy paths' do
     before do
-      @url = ForecastService.build_url('40.609102', '-105.13186')
+      @url = build_forecast_url('40.609102', '-105.13186')
 
       forecast_response = File.read('spec/fixtures/forecasts/good_request_response.json')
 
@@ -23,8 +11,10 @@ RSpec.describe ForecastService, type: :service do
     end
 
     it 'gets a response' do
-      response = ForecastService.send_request(@url)
-
+      params = ForecastService.forecast_params('40.609102', '-105.13186')
+      url = ForecastService.url
+      conn = ForecastService.faraday_req(url, params)
+      response = conn.get
       expect(response.status).to eq 200
     end
 
@@ -67,16 +57,18 @@ RSpec.describe ForecastService, type: :service do
       expect(day[:weather][0][:description]).to eq "light rain"
     end
 
-    it 'sad path: bad request' do
-      forecast_response = File.read('spec/fixtures/forecasts/bad_request_response.json')
+    describe 'sad paths' do
+      it 'bad request: missing parameter' do
+        forecast_response = File.read('spec/fixtures/forecasts/bad_request_response.json')
 
-      url = ForecastService.build_url('', '-105.13186')
-      stub_request(:get, url).to_return(status: 400, body: forecast_response)
+        url = build_forecast_url('', '-105.13186')
+        stub_request(:get, url).to_return(status: 400, body: forecast_response)
 
-      response = ForecastService.get_forecast('', '-105.13186')
+        response = ForecastService.get_forecast('', '-105.13186')
 
-      expect(response[:cod]).to eq '400'
-      expect(response[:message]).to eq "Nothing to geocode"
+        expect(response[:cod]).to eq '400'
+        expect(response[:message]).to eq "Nothing to geocode"
+      end
     end
   end
 end

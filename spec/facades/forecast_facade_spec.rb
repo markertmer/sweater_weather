@@ -2,11 +2,11 @@ require 'rails_helper'
 
 RSpec.describe ForecastFacade, type: :facade do
   before do
-    url = LocationService.build_url('chicago, il')
+    url = build_location_url('chicago, il')
     location_response = File.read('spec/fixtures/locations/good_request_response.json')
     stub_request(:get, url).to_return(status: 200, body: location_response)
 
-    url = ForecastService.build_url('41.883229', '-87.632398')
+    url = build_forecast_url('41.883229', '-87.632398')
     forecast_response = File.read('spec/fixtures/forecasts/good_request_response.json')
     stub_request(:get, url).to_return(status: 200, body: forecast_response)
   end

@@ -2,28 +2,18 @@ require 'rails_helper'
 
 RSpec.describe ImageService, type: :service do
 
-  it 'builds a url' do
-    base = 'https://api.unsplash.com/search/photos?'
-    key = "client_id=#{ENV['unsplash_key']}&"
-    options = 'order_by=relevant&page=1&per_page=1&'
-    query = "query=chicago, il"
-
-    expected = [base, key, options, query].join
-    expect(ImageService.build_url('chicago, il')).to eq expected
-  end
-
-  describe 'http requests' do
+  describe 'happy paths' do
     before do
-      @url = ImageService.build_url('chicago, il')
-
+      @url = build_image_url('chicago, il')
       image_response = File.read('spec/fixtures/images/good_request_response.json')
-
       stub_request(:get, @url).to_return(status: 200, body: image_response)
     end
 
     it 'gets a response' do
-      response = ImageService.send_request(@url)
-
+      params = ImageService.image_params('chicago, il')
+      url = ImageService.url
+      conn = ImageService.faraday_req(url, params)
+      response = conn.get
       expect(response.status).to eq 200
     end
 
@@ -43,16 +33,18 @@ RSpec.describe ImageService, type: :service do
       expect(image_credit[:links][:html]).to eq "https://unsplash.com/@drench777"
     end
 
-    it 'sad path: bad request' do
-      image_response = File.read('spec/fixtures/images/bad_request_response.json')
+    describe 'sad paths' do
+      it 'bad request: missing query' do
+        image_response = File.read('spec/fixtures/images/bad_request_response.json')
 
-      url = ImageService.build_url('')
-      stub_request(:get, url).to_return(status: 200, body: image_response)
+        url = build_image_url('')
+        stub_request(:get, url).to_return(status: 200, body: image_response)
 
-      response = ImageService.get_image('')
+        response = ImageService.get_image('')
 
-      expect(response[:total]).to eq 0
-      expect(response[:results].count).to eq 0
+        expect(response[:total]).to eq 0
+        expect(response[:results].count).to eq 0
+      end
     end
   end
 end
