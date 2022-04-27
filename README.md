@@ -11,7 +11,7 @@ There is also functionality for registering a new user and logging in an existin
 
 ## Getting Started
 
-Follow these instructions to get a copy of this project up and running on your local machine. See Deployment Notes for information on setting up the API in a production environment.
+Follow these instructions to get a copy of this project up and running on your local machine. See [Deployment](#deployment) for information on setting up the API in a production environment.
 
 ### Prerequisites
 
@@ -223,7 +223,7 @@ Response:
 ```
 
 ### 5. Road Trip
-NOTE: The user must [obtain an API key](#authentication) in order to consume this endpoint.
+NOTE: The user must [obtain an API key](#1-authentication) in order to consume this endpoint.
 
 A `POST` request. Supply an `origin` and `destination` to obtain the travel time and local weather forecast data for the arrival time and destination. Example:
 ```
