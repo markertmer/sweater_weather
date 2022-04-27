@@ -223,7 +223,7 @@ Response:
 ```
 
 ### 5. Road Trip
-NOTE: The user must [obtain an API key](#1.-Authentication) in order to consume this endpoint.
+NOTE: The user must [obtain an API key](#authentication) in order to consume this endpoint.
 
 A `POST` request. Supply an `origin` and `destination` to obtain the travel time and local weather forecast data for the arrival time and destination. Example:
 ```
