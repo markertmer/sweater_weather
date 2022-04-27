@@ -13,8 +13,8 @@ RSpec.describe 'Road Trip Request', type: :request do
     }.to_json
 
     url = build_destination_url('denver, co', 'fort collins, co')
-    location_response = File.read('spec/fixtures/destinations/good_request_response.json')
-    stub_request(:get, url).to_return(status: 200, body: location_response)
+    destination_response = File.read('spec/fixtures/destinations/good_request_response.json')
+    stub_request(:get, url).to_return(status: 200, body: destination_response)
 
     url = build_location_url('Ft Collins, CO')
     location_response = File.read('spec/fixtures/locations/good_request_response.json')
@@ -105,6 +105,10 @@ RSpec.describe 'Road Trip Request', type: :request do
   end
 
   it 'sad path: impossible route provided' do
+    url = build_destination_url('new york, ny', 'london, england')
+    location_response = File.read('spec/fixtures/destinations/no_route_response.json')
+    stub_request(:get, url).to_return(status: 200, body: location_response)
+
     request_body = {
       "origin": "new york, ny",
       "destination": "london, england",
@@ -134,8 +138,8 @@ RSpec.describe 'Road Trip Request', type: :request do
 
   it 'edge case: irrelevant key provided along with valid location' do
     request_body = {
-      "origin": "Denver, CO",
-      "destination": "Ft Collins, CO",
+      "origin": "denver, co",
+      "destination": "fort collins, co",
       "foo": "bar",
       "api_key": "945V86HV2349586VY243982V56987V5698VB2695087B62N08"
     }.to_json

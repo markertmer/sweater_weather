@@ -2,6 +2,8 @@ require 'rails_helper'
 
 RSpec.describe 'Munchie Request', type: :request do
   before do
+    @headers = { 'CONTENT_TYPE' => 'application/json', 'Accept' => 'application/json' }
+
     url = build_destination_url('denver, co', 'fort collins, co')
     location_response = File.read('spec/fixtures/destinations/good_request_response.json')
     stub_request(:get, url).to_return(status: 200, body: location_response)
@@ -20,14 +22,15 @@ RSpec.describe 'Munchie Request', type: :request do
   end
 
   it 'returns a successful response' do
-    get '/api/v1/munchies?start=denver, co&destination=fort collins, co&food=burgers'
+    get '/api/v1/munchies?start=denver, co&destination=fort collins, co&food=burgers',
+        headers: @headers
 
     expect(response).to be_successful
     expect(response.status).to eq 200
 
-    result = JSON.parse(response.body, symbolize_names: true)
+    body = JSON.parse(response.body, symbolize_names: true)
 
-    data = result[:data]
+    data = body[:data]
     expect(data[:id]).to eq "null"
     expect(data[:type]).to eq "munchie"
 
@@ -45,47 +48,51 @@ RSpec.describe 'Munchie Request', type: :request do
   end
 
   it 'sad path: missing query' do
-    get '/api/v1/munchies?start=&destination=fort collins, co&food=burgers'
+    get '/api/v1/munchies?start=&destination=fort collins, co&food=burgers',
+        headers: @headers
 
     expect(response.status).to eq 400
 
-    result = JSON.parse(response.body, symbolize_names: true)
+    body = JSON.parse(response.body, symbolize_names: true)
 
-    expect(result[:message]).to eq "bad request"
-    expect(result[:results]).to eq ([])
+    expect(body[:message]).to eq "bad request"
+    expect(body[:results]).to eq ([])
   end
 
   it 'sad path: missing location key' do
-    get '/api/v1/munchies?destination=fort collins, co&food=burgers'
+    get '/api/v1/munchies?destination=fort collins, co&food=burgers',
+        headers: @headers
 
     expect(response.status).to eq 400
 
-    result = JSON.parse(response.body, symbolize_names: true)
+    body = JSON.parse(response.body, symbolize_names: true)
 
-    expect(result[:message]).to eq "bad request"
-    expect(result[:results]).to eq ([])
+    expect(body[:message]).to eq "bad request"
+    expect(body[:results]).to eq ([])
   end
 
   it 'sad path: irrelevant key provided' do
-    get '/api/v1/forecast?foo=bar'
+    get '/api/v1/forecast?foo=bar',
+        headers: @headers
 
     expect(response.status).to eq 400
 
-    result = JSON.parse(response.body, symbolize_names: true)
+    body = JSON.parse(response.body, symbolize_names: true)
 
-    expect(result[:message]).to eq "bad request"
-    expect(result[:results]).to eq ([])
+    expect(body[:message]).to eq "bad request"
+    expect(body[:results]).to eq ([])
   end
 
   it 'edge case: irrelevant key provided along with valid location' do
-    get '/api/v1/munchies?start=denver, co&destination=fort collins, co&food=burgers&foo=bar'
+    get '/api/v1/munchies?start=denver, co&destination=fort collins, co&food=burgers&foo=bar',
+        headers: @headers
 
     expect(response).to be_successful
     expect(response.status).to eq 200
 
-    result = JSON.parse(response.body, symbolize_names: true)
+    body = JSON.parse(response.body, symbolize_names: true)
 
-    data = result[:data]
+    data = body[:data]
     expect(data[:id]).to eq "null"
     expect(data[:type]).to eq "munchie"
 
