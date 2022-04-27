@@ -1,16 +1,22 @@
 class ImageService < ApplicationService
+  class << self
 
-  def self.get_image(location)
-    url = build_url(location)
-    get_data(url)
-  end
+    def get_image(location)
+      get_response_body(url, image_params(location))
+    end
 
-  def self.build_url(location)
-    base = 'https://api.unsplash.com/search/photos?'
-    key = "client_id=#{ENV['unsplash_key']}&"
-    options = 'order_by=relevant&page=1&per_page=1&'
-    query = "query=#{location}"
+    def url
+      'https://api.unsplash.com/search/photos'
+    end
 
-    [base, key, options, query].join
+    def image_params(location)
+      {
+        "query": location,
+        "order_by": "relevant",
+        "page": "1",
+        "per_page": "1",
+        "client_id": ENV['unsplash_key']
+      }
+    end
   end
 end

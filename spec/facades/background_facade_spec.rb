@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe BackgroundFacade, type: :facade do
   before do
-    @url = ImageService.build_url('chicago, il')
+    @url = build_image_url('chicago, il')
     image_response = File.read('spec/fixtures/images/good_request_response.json')
     stub_request(:get, @url).to_return(status: 200, body: image_response)
   end
