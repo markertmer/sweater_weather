@@ -96,4 +96,48 @@ RSpec.configure do |config|
   # as the one that triggered the failure.
   Kernel.srand config.seed
 =end
+
+  def build_location_url(query)
+    base = 'http://www.mapquestapi.com/geocoding/v1/address?'
+    location = "location=#{query}&"
+    key = "key=#{ENV['mapquest_key']}"
+
+    [base, location, key].join
+  end
+
+  def build_forecast_url(lat, lon)
+    base = 'https://api.openweathermap.org/data/2.5/onecall?'
+    location = "lat=#{lat}&lon=#{lon}&"
+    options = 'exclude=minutely&units=imperial&'
+    key = "appid=#{ENV['openweather_key']}"
+
+    [base, location, options, key].join
+  end
+
+  def build_destination_url(start, finish)
+    base = 'http://www.mapquestapi.com/directions/v2/route?'
+    key = "key=#{ENV['mapquest_key']}&"
+    from = "from=#{start}&"
+    to = "to=#{finish}"
+
+    [base, key, from, to].join
+  end
+
+  def build_restaurant_url(location, query)
+    base = 'https://api.yelp.com/v3/businesses/search?'
+    location = "location=#{location}&"
+    category = "category=restaurants&"
+    search = "term=#{query}"
+
+    [base, location, category, search].join
+  end
+
+  def build_image_url(location)
+    base = 'https://api.unsplash.com/search/photos?'
+    key = "client_id=#{ENV['unsplash_key']}&"
+    options = 'order_by=relevant&page=1&per_page=1&'
+    query = "query=#{location}"
+
+    [base, key, options, query].join
+  end
 end
