@@ -196,7 +196,7 @@ The response body will look like this:
 **NOTICE:** You MUST credit photos according to the Unsplash API [guidelines](https://unsplash.com/documentation#guidelines--crediting). 
 
 ### 4. Munchies
-This `GET` request will provide a restaurant at your destination, along with the local forecast for the day of your arrival. It requires parameters for `start` and `destination` locations, along with a `food` type search query, such as `fast food`, `barbecue`, `tapas`, `olive garden`, `sushi`, `gyros`, `pizza`, or `mexican`. __**It's MMMMMunchilicious!<sup>TM</sup>**__
+This `GET` request will provide a restaurant at your destination, along with the local forecast for the day of your arrival. It requires parameters for `start` and `destination` locations, along with a `food` type search query, such as `fast food`, `barbecue`, `tapas`, `olive garden`, `sushi`, `gyros`, `pizza`, or `mexican`. _**It's MMMMMunchilicious!<sup>TM</sup>**_
 ```
 /api/v1/munchies?start=lafayette,in&destination=nashville,tn&food=bbq
 ```
@@ -223,6 +223,8 @@ Response:
 ```
 
 ### 5. Road Trip
+NOTE: The user must [obtain an API key](#1.-Authentication) in order to consume this endpoint.
+
 A `POST` request. Supply an `origin` and `destination` to obtain the travel time and local weather forecast data for the arrival time and destination. Example:
 ```
 /api/v1/road_trip
