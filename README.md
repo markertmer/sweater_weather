@@ -1,4 +1,5 @@
-# Sweater Weather v1
+# Sweater Weather 
+### version 1
 
 A Rails API that consumes four external APIs to expose weather data via endpoints that can be easily called from a front end application. Through HTTP `get` and `post` requests, the client can obtain:
 - A detailed weather forecast for a supplied location, including current, daily and hourly weather data, along with embeddable icon links that reflect the conditions.
@@ -252,52 +253,35 @@ The response will look something like this:
     }
 }
 ```
-
-### Style test
-
-Checks if the best practices and the right coding style has been used.
-
-    Give an example
-
+<!-- ## Caching
+Low-level caching is enabled for all external API calls in the `app/services` directories. You will need to enable local caching in your local environment:
+```
+$ rails dev cache
+```
+ -->
 ## Deployment
 
-Add additional notes to deploy this on a live system
+The Sweater Weather API will be deployed via [Heroku](herokuapp.com) very soon! Check back here for updates.
 
-## Built With
+## Sweater Weather was built with the help of these tools:
 
-  - [Contributor Covenant](https://www.contributor-covenant.org/) - Used
-    for the Code of Conduct
-  - [Creative Commons](https://creativecommons.org/) - Used to choose
-    the license
-
-## Contributing
-
-Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code
-of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [Semantic Versioning](http://semver.org/) for versioning. For the versions
-available, see the [tags on this
-repository](https://github.com/PurpleBooth/a-good-readme-template/tags).
+  - [Postman](https://www.postman.com/) - Used for testing HTTP requests in the local dev environment.
+  - [Webmock](https://github.com/bblimke/webmock) - This gem was particularly helpful in stubbing HTTP requests for the project's [RSpec](https://rubygems.org/gems/rspec/versions/3.5.0) testing suite.
+  - [Atom](https://atom.io/) - Because I don't know any better! But it proved to be a robust tool for supporting a dynamic workflow while editing this project and referencing 10+ other repos that were kept open for the duration of the v1 build. 
 
 ## Authors
 
-  - **Billie Thompson** - *Provided README Template* -
-    [PurpleBooth](https://github.com/PurpleBooth)
+  - **[Mark Ertmer](https://github.com/markertmer)**
 
-See also the list of
-[contributors](https://github.com/PurpleBooth/a-good-readme-template/contributors)
-who participated in this project.
+## Contributing
+
+Please [contact me](https://github.com/markertmer) if you are interested in contributing to this API.
 
 ## License
 
-This project is licensed under the [CC0 1.0 Universal](LICENSE.md)
-Creative Commons License - see the [LICENSE.md](LICENSE.md) file for
-details
+All rights reserved. But feel free to make a copy and make it yours!
 
 ## Acknowledgments
-
-  - Hat tip to anyone whose code is used
-  - Inspiration
-  - etc
+  - Sweater Weather was the final project of Module 3 in the [Back End Engineering Program](https://backend.turing.edu/) at **[Turing School of Software and Design](https://turing.edu/)**.
+  - It was submitted on April 27, 2022 and received a (hopefully!) passing grade from instructor [Jamison Ordway](https://github.com/jamisonordway).
+  - The project was built to the specification of [these requirements].
