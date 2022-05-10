@@ -56,7 +56,7 @@ $ bundle exec rspec
 => Finished in 0.74927 seconds (files took 1.62 seconds to load)
 => 74 examples, 0 failures
 
-=> Coverage report generated for RSpec to /Users/markertmer/turing/3module/projects/sweater_weather/coverage. 1392 / 1397 LOC (99.64%) covered.
+=> Coverage report generated for RSpec to /sweater_weather/coverage. 1392 / 1397 LOC (99.64%) covered.
 ```
 
 You should now be able to establish a local server to start answering requests.
@@ -285,5 +285,5 @@ All rights reserved. But feel free to make a copy and make it yours!
 
 ## Acknowledgments
   - Sweater Weather was the final project of Module 3 in the [Back End Engineering Program](https://backend.turing.edu/) at **[Turing School of Software and Design](https://turing.edu/)**.
-  - It was submitted on April 27, 2022 and received a (hopefully!) passing grade from instructor [Jamison Ordway](https://github.com/jamisonordway).
+  - It was submitted on April 27, 2022 and received a passing grade from instructor [Jamison Ordway](https://github.com/jamisonordway).
   - The project was built to the specification of [these requirements].
